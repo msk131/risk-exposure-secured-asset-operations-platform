@@ -6,8 +6,8 @@ This repository stores diagrams as Mermaid Markdown. GitHub can render these dia
 
 | Project | Diagram Folder |
 | --- | --- |
-| General Finance System Migration Strategy | `projects/finance-system-migration-strategy/diagrams` |
-| Risk Exposure & Secured Asset Platform Design | `projects/risk-exposure-secured-asset-platform-design/diagrams` |
+| General Finance System Migration Strategy | `finance-system-migration-strategy/diagrams` |
+| Risk Exposure & Secured Asset Platform Design | `risk-exposure-secured-asset-platform-design/diagrams` |
 
 ## Option 1: Use GitHub Preview
 
@@ -59,13 +59,13 @@ npm install -g @mermaid-js/mermaid-cli
 Export one diagram:
 
 ```bash
-mmdc -i projects/finance-system-migration-strategy/diagrams/migration-roadmap.md -o finance-migration-roadmap.svg
+mmdc -i finance-system-migration-strategy/diagrams/migration-roadmap.md -o finance-migration-roadmap.svg
 ```
 
 Export as PNG:
 
 ```bash
-mmdc -i projects/risk-exposure-secured-asset-platform-design/diagrams/deployment-view.md -o risk-exposure-deployment-view.png
+mmdc -i risk-exposure-secured-asset-platform-design/diagrams/deployment-view.md -o risk-exposure-deployment-view.png
 ```
 
 Best for:
@@ -143,4 +143,3 @@ risk-exposure-core-domain-erd.svg
 risk-exposure-service-interaction-flow.svg
 risk-exposure-deployment-view.svg
 ```
-

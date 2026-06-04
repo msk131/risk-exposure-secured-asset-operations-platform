@@ -50,7 +50,7 @@ This project covers:
 - Phased cutover and rollback planning
 - Business continuity and downtime minimization
 
-Project: [General Finance System Migration Strategy](projects/finance-system-migration-strategy/README.md)
+Project: [General Finance System Migration Strategy](finance-system-migration-strategy/README.md)
 
 ### 2. Risk Exposure & Secured Asset Platform Design
 
@@ -67,7 +67,7 @@ This project covers:
 - Observability, DevSecOps, and production readiness
 - New platform architecture decisions
 
-Project: [Risk Exposure & Secured Asset Platform Design](projects/risk-exposure-secured-asset-platform-design/README.md)
+Project: [Risk Exposure & Secured Asset Platform Design](risk-exposure-secured-asset-platform-design/README.md)
 
 ## Repository Structure
 
@@ -76,18 +76,17 @@ risk-exposure-secured-asset-operations-platform/
 ├── README.md
 ├── docs/
 │   └── github-project-plan.md
-├── projects/
-│   ├── finance-system-migration-strategy/
-│   └── risk-exposure-secured-asset-platform-design/
+├── finance-system-migration-strategy/
+├── risk-exposure-secured-asset-platform-design/
 └── .github/
     └── ISSUE_TEMPLATE/
 ```
 
 ## Data Modeling And ER Diagrams
 
-Use [projects/risk-exposure-secured-asset-platform-design/diagrams](projects/risk-exposure-secured-asset-platform-design/diagrams/) for ER diagrams and architecture diagrams.
+Use [risk-exposure-secured-asset-platform-design/diagrams](risk-exposure-secured-asset-platform-design/diagrams/) for ER diagrams and architecture diagrams.
 
-The starter ERD is here: [core-domain-erd.md](projects/risk-exposure-secured-asset-platform-design/diagrams/core-domain-erd.md).
+The starter ERD is here: [core-domain-erd.md](risk-exposure-secured-asset-platform-design/diagrams/core-domain-erd.md).
 
 GitHub renders Mermaid diagrams directly in Markdown, so the diagrams can live with the design documentation and evolve through pull requests.
 
