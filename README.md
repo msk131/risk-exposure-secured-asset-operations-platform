@@ -84,6 +84,22 @@ This project covers:
 
 Project: [Database Optimization Expert Strategy](database-optimization-expert-strategy/README.md)
 
+### 4. Schema Migration Toolkit
+
+Design a schema evolution and migration governance toolkit for regulated finance platforms.
+
+This project covers:
+
+- Logical and physical data modeling
+- ER diagrams and data ownership design
+- Versioned schema migrations
+- Flyway/Liquibase-style migration workflows
+- Expand-contract database migration patterns
+- Data quality, lineage, validation, and reconciliation
+- Rollback, audit, and release governance
+
+Project: [Schema Migration Toolkit](schema-migration-toolkit/README.md)
+
 ## Repository Structure
 
 ```text
@@ -93,6 +109,7 @@ risk-exposure-secured-asset-operations-platform/
 │   └── github-project-plan.md
 ├── finance-system-migration-strategy/
 ├── database-optimization-expert-strategy/
+├── schema-migration-toolkit/
 ├── risk-exposure-secured-asset-platform-design/
 └── .github/
     └── ISSUE_TEMPLATE/
