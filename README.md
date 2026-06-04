@@ -18,6 +18,8 @@ It is positioned as an architecture and finance system migration strategy portfo
 - ER modeling and service-owned schema design
 - Parallel-run validation, phased cutover, and rollback planning
 - Audit trails, encryption, access control, and regulatory readiness
+- IT and business risk identification for availability, performance, and resiliency
+- Current technology adoption across cyber security, AI / ML, data engineering, and cloud-native delivery
 
 ## My Positioning
 
@@ -30,8 +32,28 @@ I position myself as a legacy-to-modern migration specialist with deep experienc
 - API-first and microservices architecture
 - Parallel-run validation and phased cutover
 - Audit, security, compliance, and operational resilience
+- DevSecOps automation, observability, and engineering productivity
+- innovation adoption across AI-assisted engineering, data pipelines, and cloud platforms
 
 My strength is connecting architecture with execution: I can assess a legacy estate, design the migration path, improve database performance, define target-state services and schemas, and lead delivery through testing, reconciliation, cutover, and decommissioning.
+
+## Visual Project Map
+
+| Project | Focus |
+| --- | --- |
+| <img src="assets/icons/migration.svg" width="28" alt="Migration icon"> [General Finance System Migration Strategy](finance-system-migration-strategy/README.md) | Phased migration, data integrity, reconciliation, cutover, business continuity |
+| <img src="assets/icons/platform.svg" width="28" alt="Platform design icon"> [Risk Exposure & Secured Asset Platform Design](risk-exposure-secured-asset-platform-design/README.md) | Target architecture, microservices, AWS cloud, APIs, events, zero-downtime delivery |
+| <img src="assets/icons/database.svg" width="28" alt="Database optimization icon"> [Database Optimization Expert Strategy](database-optimization-expert-strategy/README.md) | Oracle tuning, execution plans, indexing, partitioning, batch and performance governance |
+| <img src="assets/icons/schema.svg" width="28" alt="Schema migration icon"> [Schema Migration Toolkit](schema-migration-toolkit/README.md) | Schema design, RBAC migration, coexistence data sync, migration tooling, governance |
+| <img src="assets/icons/legacy.svg" width="28" alt="Legacy platform icon"> [Legacy Asset Management Platform](legacy-asset-management-platform/README.md) | Documentation-only 2005-era legacy baseline with batch, PL/SQL-style, SOAP, MQ, and manual operations |
+
+## Leadership Themes
+
+| Theme | Portfolio Evidence |
+| --- | --- |
+| <img src="assets/icons/risk.svg" width="24" alt="Risk icon"> Risk and resiliency | [Risk Opportunity And Innovation Strategy](docs/risk-opportunity-innovation-strategy.md) |
+| <img src="assets/icons/devsecops.svg" width="24" alt="DevSecOps icon"> DevSecOps and quality | CI/CD, testing, security scans, progressive deployment, rollback controls |
+| <img src="assets/icons/innovation.svg" width="24" alt="Innovation icon"> Innovation and modern technology | AI-assisted engineering, data engineering, observability, cloud-native architecture |
 
 ## Projects
 

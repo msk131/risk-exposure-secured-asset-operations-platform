@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" role="img" aria-label="Platform design icon">
+  <rect x="7" y="7" width="34" height="34" rx="6" fill="#F8FAFC" stroke="#334155" stroke-width="2"/>
+  <circle cx="17" cy="18" r="4" fill="#DBEAFE" stroke="#2563EB" stroke-width="2"/>
+  <circle cx="31" cy="18" r="4" fill="#DCFCE7" stroke="#16A34A" stroke-width="2"/>
+  <circle cx="24" cy="31" r="4" fill="#FEF3C7" stroke="#D97706" stroke-width="2"/>
+  <path d="M21 19h7M19 22l3 7M29 22l-3 7" stroke="#64748B" stroke-width="2" stroke-linecap="round"/>
+</svg>
