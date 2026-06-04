@@ -4,6 +4,21 @@ This repository is a portfolio-style planning workspace for modernizing a legacy
 
 The platform concept is intentionally generic. It represents systems that manage financial exposure, secured assets, margin-style obligations, account or agreement context, transaction history, operational instructions, settlement workflows, auditability, and reporting.
 
+## Portfolio Project Summary
+
+This project demonstrates my ability to plan and design enterprise modernization programs where legacy platforms must evolve into resilient, API-first, service-oriented applications without disrupting business operations.
+
+It is positioned as an architecture and migration planning portfolio project focused on:
+
+- Legacy-to-modern migration strategy
+- Oracle database performance improvement
+- Zero-loss data mapping and reconciliation
+- Data cleansing, migration staging, and exception handling
+- API-first and microservices target architecture
+- ER modeling and service-owned schema design
+- Parallel-run validation, phased cutover, and rollback planning
+- Audit trails, encryption, access control, and regulatory readiness
+
 ## My Positioning
 
 I position myself as a legacy-to-modern migration specialist with deep experience in:
@@ -75,4 +90,3 @@ Use [projects/new-application-design/diagrams](projects/new-application-design/d
 The starter ERD is here: [core-domain-erd.md](projects/new-application-design/diagrams/core-domain-erd.md).
 
 GitHub renders Mermaid diagrams directly in Markdown, so the diagrams can live with the design documentation and evolve through pull requests.
-
