@@ -9,6 +9,7 @@ This repository stores diagrams as Mermaid Markdown. GitHub can render these dia
 | General Finance System Migration Strategy | `finance-system-migration-strategy/diagrams` |
 | Database Optimization Expert Strategy | `database-optimization-expert-strategy/diagrams` |
 | Schema Migration Toolkit | `schema-migration-toolkit/diagrams` |
+| Legacy Asset Management Platform | `legacy-asset-management-platform/diagrams` |
 | Risk Exposure & Secured Asset Platform Design | `risk-exposure-secured-asset-platform-design/diagrams` |
 
 ## Export Options
@@ -33,6 +34,7 @@ mmdc -i schema-migration-toolkit/diagrams/schema-evolution-flow.md -o schema-evo
 | `data-reconciliation-flow.md` | Shows zero-loss migration and controls |
 | `oracle-tuning-workflow.md` | Shows database optimization expertise |
 | `schema-evolution-flow.md` | Shows schema migration governance |
+| `legacy-architecture.md` | Shows the 2005-era source system baseline |
+| `legacy-data-pipeline.md` | Shows old-tech file and batch processing |
 | `logical-finance-erd.md` | Shows data modeling ability |
 | `deployment-view.md` | Shows platform and DevSecOps awareness |
-

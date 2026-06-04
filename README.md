@@ -100,6 +100,22 @@ This project covers:
 
 Project: [Schema Migration Toolkit](schema-migration-toolkit/README.md)
 
+### 5. Legacy Asset Management Platform
+
+A documentation-only 2005-era legacy asset management platform baseline used to drive migration planning, database optimization, schema migration, and target architecture design.
+
+This project covers:
+
+- Java EE 5 style monolith context
+- JSP/Servlet/Struts-style operations dashboard
+- Oracle shared schema and PL/SQL-heavy processing
+- shell-script and SQL*Loader-style batch pipeline
+- SOAP/XML, MQ-style, and SFTP-style integrations
+- manual reconciliation and operations sign-off
+- modernization pain points and migration readiness
+
+Project: [Legacy Asset Management Platform](legacy-asset-management-platform/README.md)
+
 ## Repository Structure
 
 ```text
@@ -110,6 +126,7 @@ risk-exposure-secured-asset-operations-platform/
 ├── finance-system-migration-strategy/
 ├── database-optimization-expert-strategy/
 ├── schema-migration-toolkit/
+├── legacy-asset-management-platform/
 ├── risk-exposure-secured-asset-platform-design/
 └── .github/
     └── ISSUE_TEMPLATE/
