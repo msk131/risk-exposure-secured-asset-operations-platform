@@ -37,11 +37,11 @@ My strength is connecting architecture with execution: I can assess a legacy est
 
 ### 1. Migration Planning
 
-Plan the migration from a legacy platform to the new operating model.
+Plan a general finance system migration strategy that can apply to core banking, lending, payments, reporting, risk, operations, or other regulated finance platforms.
 
 This project covers:
 
-- Legacy discovery and dependency mapping
+- Legacy finance system discovery and dependency mapping
 - Data integrity and zero-loss mapping
 - Data cleansing and exception handling
 - Oracle performance baseline and remediation plan

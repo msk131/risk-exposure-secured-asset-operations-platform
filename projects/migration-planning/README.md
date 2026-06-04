@@ -1,10 +1,12 @@
 # Migration Planning
 
-This project defines a practical migration plan for moving from a legacy financial operations platform to a modern Risk Exposure & Secured Asset Operations Platform.
+This project defines a general finance system migration strategy for moving from legacy platforms to modern, resilient, and auditable applications.
+
+The strategy can apply to core banking, lending, payments, reporting, risk, operations, customer servicing, or other regulated finance systems where data integrity, auditability, performance, and business continuity are critical.
 
 ## Migration Objectives
 
-- Preserve data integrity with zero-loss mapping for customer, account, transaction, balance, agreement, and secured asset records.
+- Preserve data integrity with zero-loss mapping for customer, account, transaction, balance, product, agreement, and operational records.
 - Cleanse duplicate, outdated, corrupt, and incomplete data before migration.
 - Run legacy and new flows in parallel before final cutover.
 - Maintain immutable audit trails during and after migration.
@@ -16,7 +18,7 @@ This project defines a practical migration plan for moving from a legacy financi
 
 Detailed architecture: [migration-architecture.md](docs/migration-architecture.md)
 
-The migration architecture supports coexistence between the legacy platform and the new application. Traffic can move gradually by capability, customer segment, region, channel, or workflow.
+The migration architecture supports coexistence between a legacy finance system and a target modern application. Traffic can move gradually by capability, customer segment, region, channel, product, or workflow.
 
 ## Data Integrity And Migration Controls
 
@@ -45,6 +47,7 @@ The migration architecture supports coexistence between the legacy platform and 
 - Inventory applications, jobs, tables, stored procedures, interfaces, and owners.
 - Map business capabilities and critical user journeys.
 - Identify shared databases and hidden consumers.
+- Classify finance-domain data such as customers, accounts, balances, transactions, products, agreements, limits, instructions, and reporting outputs.
 - Establish performance, reliability, and data quality baselines.
 
 ### Phase 2: Data And Performance Readiness
@@ -65,7 +68,7 @@ The migration architecture supports coexistence between the legacy platform and 
 ### Phase 4: Parallel Run
 
 - Run legacy and new flows together.
-- Compare transaction history, balances, statuses, and operational outputs.
+- Compare transaction history, balances, statuses, reports, calculations, and operational outputs.
 - Review exceptions and fix mapping or logic gaps.
 - Agree readiness thresholds for traffic migration.
 
@@ -103,4 +106,3 @@ The migration architecture supports coexistence between the legacy platform and 
 - Downtime stays within approved window.
 - Production incidents reduce after migration.
 - Legacy components are retired with evidence.
-

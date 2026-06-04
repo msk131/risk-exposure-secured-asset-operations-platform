@@ -8,7 +8,7 @@ Risk Exposure & Secured Asset Operations Platform
 
 ## Project Description
 
-Portfolio of practical engineering plans for migration planning and new application design for a Risk Exposure & Secured Asset Operations Platform.
+Portfolio of practical engineering plans for general finance system migration strategy and new application design for a Risk Exposure & Secured Asset Operations Platform.
 
 ## Board Columns
 
@@ -82,4 +82,4 @@ Portfolio of practical engineering plans for migration planning and new applicat
 
 ## GitHub Repository Description
 
-Risk exposure, secured asset operations, migration planning, and new application design portfolio.
+General finance system migration strategy, risk exposure, secured asset operations, and new application design portfolio.

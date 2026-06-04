@@ -1,6 +1,8 @@
 # Migration Architecture
 
-This document defines the architecture for migrating a legacy platform to the new Risk Exposure & Secured Asset Operations Platform.
+This document defines a general migration architecture for moving a legacy finance system to a modern target application.
+
+The pattern can be used for regulated finance domains such as banking, lending, payments, reporting, risk, operations, or customer servicing.
 
 ## High-Level Coexistence Architecture
 
@@ -94,4 +96,3 @@ sequenceDiagram
 - Use reconciliation reports before production cutover.
 - Use immutable audit events for migration evidence.
 - Use encryption and least-privilege access for migration jobs.
-
