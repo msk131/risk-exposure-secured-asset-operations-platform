@@ -121,14 +121,6 @@ Use [risk-exposure-secured-asset-platform-design/diagrams](risk-exposure-secured
 
 The starter ERD is here: [core-domain-erd.md](risk-exposure-secured-asset-platform-design/diagrams/core-domain-erd.md).
 
-GitHub renders Mermaid diagrams directly in Markdown, so the diagrams can live with the design documentation and evolve through pull requests.
-
-## Generating Real Diagrams
-
-The diagrams in this repository are written in Mermaid Markdown so they render directly on GitHub. To export them as real visual files such as PNG, SVG, or PDF, use this guide:
-
-[docs/diagram-guides/generate-real-diagrams.md](docs/diagram-guides/generate-real-diagrams.md)
-
 Recommended approach:
 
 1. Draft the diagram in the Markdown file.
