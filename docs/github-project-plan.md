@@ -25,7 +25,7 @@ Portfolio of practical engineering plans for general finance system migration st
 
 | Label | Purpose |
 | --- | --- |
-| `migration-planning` | Legacy modernization and phased migration work |
+| `finance-migration-strategy` | General finance system modernization and phased migration work |
 | `oracle-performance` | Oracle tuning, SQL review, indexing, and batch optimization |
 | `schema-design` | Data model, ownership, and schema evolution work |
 | `migration-tooling` | Flyway, Liquibase, CI/CD, and automation |

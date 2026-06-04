@@ -1,4 +1,4 @@
-# Migration Planning
+# General Finance System Migration Strategy
 
 This project defines a general finance system migration strategy for moving from legacy platforms to modern, resilient, and auditable applications.
 

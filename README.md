@@ -8,7 +8,7 @@ The platform concept is intentionally generic. It represents systems that manage
 
 This project demonstrates my ability to plan and design enterprise modernization programs where legacy platforms must evolve into resilient, API-first, service-oriented applications without disrupting business operations.
 
-It is positioned as an architecture and migration planning portfolio project focused on:
+It is positioned as an architecture and finance system migration strategy portfolio project focused on:
 
 - Legacy-to-modern migration strategy
 - Oracle database performance improvement
@@ -35,7 +35,7 @@ My strength is connecting architecture with execution: I can assess a legacy est
 
 ## Projects
 
-### 1. Migration Planning
+### 1. General Finance System Migration Strategy
 
 Plan a general finance system migration strategy that can apply to core banking, lending, payments, reporting, risk, operations, or other regulated finance platforms.
 
@@ -50,7 +50,7 @@ This project covers:
 - Phased cutover and rollback planning
 - Business continuity and downtime minimization
 
-Project: [Migration Planning](projects/migration-planning/README.md)
+Project: [General Finance System Migration Strategy](projects/finance-system-migration-strategy/README.md)
 
 ### 2. New Application Design
 
@@ -77,7 +77,7 @@ risk-exposure-secured-asset-operations-platform/
 ├── docs/
 │   └── github-project-plan.md
 ├── projects/
-│   ├── migration-planning/
+│   ├── finance-system-migration-strategy/
 │   └── new-application-design/
 └── .github/
     └── ISSUE_TEMPLATE/
