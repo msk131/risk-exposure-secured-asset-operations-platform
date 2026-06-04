@@ -52,7 +52,7 @@ This project covers:
 
 Project: [General Finance System Migration Strategy](projects/finance-system-migration-strategy/README.md)
 
-### 2. New Application Design
+### 2. Risk Exposure & Secured Asset Platform Design
 
 Design the target-state application architecture for the new platform.
 
@@ -67,7 +67,7 @@ This project covers:
 - Observability, DevSecOps, and production readiness
 - New platform architecture decisions
 
-Project: [New Application Design](projects/new-application-design/README.md)
+Project: [Risk Exposure & Secured Asset Platform Design](projects/risk-exposure-secured-asset-platform-design/README.md)
 
 ## Repository Structure
 
@@ -78,15 +78,15 @@ risk-exposure-secured-asset-operations-platform/
 │   └── github-project-plan.md
 ├── projects/
 │   ├── finance-system-migration-strategy/
-│   └── new-application-design/
+│   └── risk-exposure-secured-asset-platform-design/
 └── .github/
     └── ISSUE_TEMPLATE/
 ```
 
 ## Data Modeling And ER Diagrams
 
-Use [projects/new-application-design/diagrams](projects/new-application-design/diagrams/) for ER diagrams and architecture diagrams.
+Use [projects/risk-exposure-secured-asset-platform-design/diagrams](projects/risk-exposure-secured-asset-platform-design/diagrams/) for ER diagrams and architecture diagrams.
 
-The starter ERD is here: [core-domain-erd.md](projects/new-application-design/diagrams/core-domain-erd.md).
+The starter ERD is here: [core-domain-erd.md](projects/risk-exposure-secured-asset-platform-design/diagrams/core-domain-erd.md).
 
 GitHub renders Mermaid diagrams directly in Markdown, so the diagrams can live with the design documentation and evolve through pull requests.

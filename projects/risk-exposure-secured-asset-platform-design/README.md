@@ -1,4 +1,4 @@
-# New Application Design
+# Risk Exposure & Secured Asset Platform Design
 
 This project defines the target-state design for a modern Risk Exposure & Secured Asset Operations Platform.
 
@@ -121,4 +121,3 @@ The target platform should provide consistent data and workflows across:
 - Operational dashboards
 
 Channel parity depends on a consistent core data model, clear API contracts, and controlled read models.
-
