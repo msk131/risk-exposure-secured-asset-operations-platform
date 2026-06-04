@@ -69,6 +69,21 @@ This project covers:
 
 Project: [Risk Exposure & Secured Asset Platform Design](risk-exposure-secured-asset-platform-design/README.md)
 
+### 3. Database Optimization Expert Strategy
+
+Plan a database performance improvement strategy for Oracle-backed finance systems and high-volume enterprise applications.
+
+This project covers:
+
+- Oracle SQL tuning and execution plan analysis
+- Index, partitioning, and statistics strategy
+- Batch workload optimization
+- Wait event, locking, blocking, and contention analysis
+- Performance baselining and regression prevention
+- Production-safe rollout and rollback controls
+
+Project: [Database Optimization Expert Strategy](database-optimization-expert-strategy/README.md)
+
 ## Repository Structure
 
 ```text
@@ -77,6 +92,7 @@ risk-exposure-secured-asset-operations-platform/
 ├── docs/
 │   └── github-project-plan.md
 ├── finance-system-migration-strategy/
+├── database-optimization-expert-strategy/
 ├── risk-exposure-secured-asset-platform-design/
 └── .github/
     └── ISSUE_TEMPLATE/
