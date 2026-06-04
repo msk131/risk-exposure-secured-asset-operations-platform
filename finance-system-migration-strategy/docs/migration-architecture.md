@@ -8,17 +8,17 @@ The pattern can be used for regulated finance domains such as banking, lending, 
 
 ```mermaid
 flowchart TB
-    CHANNELS[Channels and Integrations]
-    ROUTER[Routing Layer / API Gateway]
-    LEGACY[Legacy Platform]
-    LEGACYDB[(Legacy Database)]
-    NEWSVC[New Application Services]
-    NEWDB[(Target Service Databases)]
-    CDC[CDC / Data Sync]
-    STAGE[(Migration Staging)]
-    RECON[Reconciliation Engine]
-    AUDIT[Immutable Audit Store]
-    OBS[Observability Dashboards]
+    CHANNELS["Channels and Integrations"]
+    ROUTER["Routing Layer and API Gateway"]
+    LEGACY["Legacy Platform"]
+    LEGACYDB[("Legacy Database")]
+    NEWSVC["New Application Services"]
+    NEWDB[("Target Service Databases")]
+    CDC["CDC and Data Sync"]
+    STAGE[("Migration Staging")]
+    RECON["Reconciliation Engine"]
+    AUDIT["Immutable Audit Store"]
+    OBS["Observability Dashboards"]
 
     CHANNELS --> ROUTER
     ROUTER --> LEGACY
@@ -45,15 +45,15 @@ flowchart TB
 
 ```mermaid
 flowchart LR
-    SRC[(Legacy Repository)]
-    PROFILE[Data Profiling]
-    CLEANSE[Data Cleansing]
-    MAP[Zero-Loss Mapping]
-    STAGE[(Migration Staging)]
-    VALIDATE[Validation Rules]
-    TARGET[(Target Databases)]
-    RECON[Reconciliation Reports]
-    EXCEPT[Exception Queue]
+    SRC[("Legacy Repository")]
+    PROFILE["Data Profiling"]
+    CLEANSE["Data Cleansing"]
+    MAP["Zero-Loss Mapping"]
+    STAGE[("Migration Staging")]
+    VALIDATE["Validation Rules"]
+    TARGET[("Target Databases")]
+    RECON["Reconciliation Reports"]
+    EXCEPT["Exception Queue"]
 
     SRC --> PROFILE
     PROFILE --> CLEANSE
