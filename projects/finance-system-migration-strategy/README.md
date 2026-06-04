@@ -20,6 +20,14 @@ Detailed architecture: [migration-architecture.md](docs/migration-architecture.m
 
 The migration architecture supports coexistence between a legacy finance system and a target modern application. Traffic can move gradually by capability, customer segment, region, channel, product, or workflow.
 
+## Diagrams
+
+| Diagram | Purpose |
+| --- | --- |
+| [migration-roadmap.md](diagrams/migration-roadmap.md) | End-to-end migration lifecycle and delivery phases |
+| [data-reconciliation-flow.md](diagrams/data-reconciliation-flow.md) | Data profiling, cleansing, mapping, validation, and reconciliation |
+| [cutover-runbook-flow.md](diagrams/cutover-runbook-flow.md) | Production cutover decision flow with rollback path |
+
 ## Data Integrity And Migration Controls
 
 | Control | Purpose |
@@ -97,6 +105,12 @@ The migration architecture supports coexistence between a legacy finance system 
 | Statistics | Review stale or misleading optimizer statistics |
 | Batch tuning | Replace row-by-row processing, tune commits, and reduce database round trips |
 | Regression control | Add performance validation before production rollout |
+
+## Detailed Planning Artifacts
+
+- [migration-architecture.md](docs/migration-architecture.md)
+- [risk-control-matrix.md](docs/risk-control-matrix.md)
+- [reconciliation-strategy.md](docs/reconciliation-strategy.md)
 
 ## Success Metrics
 

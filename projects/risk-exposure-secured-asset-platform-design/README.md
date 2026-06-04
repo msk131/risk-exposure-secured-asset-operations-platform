@@ -101,6 +101,18 @@ ER diagrams live in [diagrams](diagrams/).
 
 Start with [core-domain-erd.md](diagrams/core-domain-erd.md).
 
+Additional diagrams:
+
+- [service-interaction-flow.md](diagrams/service-interaction-flow.md)
+- [event-driven-reporting.md](diagrams/event-driven-reporting.md)
+- [deployment-view.md](diagrams/deployment-view.md)
+
+Detailed design docs:
+
+- [service-design.md](docs/service-design.md)
+- [data-ownership.md](docs/data-ownership.md)
+- [observability-and-devsecops.md](docs/observability-and-devsecops.md)
+
 ## API Design Principles
 
 - Expose business capabilities through REST APIs.
@@ -121,3 +133,14 @@ The target platform should provide consistent data and workflows across:
 - Operational dashboards
 
 Channel parity depends on a consistent core data model, clear API contracts, and controlled read models.
+
+## Architecture Decisions
+
+| Decision | Direction |
+| --- | --- |
+| API access | Channels access business capabilities through APIs, not direct database calls |
+| Data ownership | Each service owns its operational data store |
+| Integration | Domain events update audit, reporting, and downstream integrations |
+| Reporting | Reporting uses read models to avoid loading operational tables |
+| Audit | Business lifecycle changes emit immutable audit events |
+| Reliability | Critical write APIs use idempotency and traceable request identifiers |
