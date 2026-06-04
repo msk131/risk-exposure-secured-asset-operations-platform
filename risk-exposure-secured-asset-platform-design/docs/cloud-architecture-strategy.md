@@ -7,6 +7,8 @@ AWS is the recommended cloud target for this portfolio architecture.
 | Concern | AWS Service Direction |
 | --- | --- |
 | Container platform | Amazon EKS for Kubernetes-based platform engineering |
+| GitOps delivery | Argo CD |
+| Kubernetes packaging | Helm charts |
 | Simpler container alternative | Amazon ECS Fargate where operational overhead should be lower |
 | Relational databases | Amazon Aurora PostgreSQL |
 | CDC and migration | AWS DMS or Debezium-style CDC into Kafka/MSK |
@@ -36,5 +38,12 @@ AWS is the recommended cloud target for this portfolio architecture.
 | EKS | You want Kubernetes, Helm, platform engineering, service mesh, and portable microservice operations |
 | ECS Fargate | You want simpler container hosting with less Kubernetes operational overhead |
 
-Recommended portfolio choice: **EKS** for the target architecture, with ECS Fargate listed as a simpler alternative.
+Recommended portfolio choice: **EKS + Helm + Argo CD** for the target architecture, with ECS Fargate listed as a simpler alternative.
 
+## GitOps Runtime Model
+
+- GitHub Actions handles CI, image creation, testing, and scanning.
+- Helm defines reusable Kubernetes application packages.
+- Argo CD continuously reconciles desired state from Git into EKS.
+- Environment promotion is handled through reviewed manifest or values changes.
+- Drift detection identifies manual runtime changes that are not represented in Git.

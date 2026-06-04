@@ -5,6 +5,9 @@ flowchart TB
     USERS["Web Mobile Operations Users"]
     EDGE["API Gateway or Ingress"]
     EKS["Amazon EKS Microservices"]
+    ARGO["Argo CD GitOps"]
+    HELM["Helm Charts"]
+    ECR["Amazon ECR"]
     MSK["Amazon MSK Event Streaming"]
     AURORA[("Aurora PostgreSQL Service Databases")]
     REDIS[("ElastiCache Redis")]
@@ -16,6 +19,9 @@ flowchart TB
 
     USERS --> EDGE
     EDGE --> EKS
+    ECR --> EKS
+    HELM --> ARGO
+    ARGO --> EKS
     EKS --> AURORA
     EKS --> REDIS
     EKS --> MSK
@@ -33,4 +39,3 @@ flowchart TB
 - EKS is the recommended portfolio target for Kubernetes-based platform engineering.
 - Aurora PostgreSQL is the default relational database for service-owned data.
 - MSK supports event-driven integration, audit, reporting, and migration CDC flows.
-

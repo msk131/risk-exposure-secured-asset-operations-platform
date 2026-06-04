@@ -118,6 +118,7 @@ Detailed design docs:
 - [ci-cd-and-devsecops-strategy.md](docs/ci-cd-and-devsecops-strategy.md)
 - [testing-strategy.md](docs/testing-strategy.md)
 - [zero-downtime-strategy.md](docs/zero-downtime-strategy.md)
+- [modernization-value-map.md](docs/modernization-value-map.md)
 
 Technology diagrams:
 
@@ -125,6 +126,8 @@ Technology diagrams:
 - [ci-cd-pipeline.md](diagrams/ci-cd-pipeline.md)
 - [zero-downtime-release-flow.md](diagrams/zero-downtime-release-flow.md)
 - [testing-pyramid.md](diagrams/testing-pyramid.md)
+- [gitops-deployment-flow.md](diagrams/gitops-deployment-flow.md)
+- [legacy-to-modern-capability-map.md](diagrams/legacy-to-modern-capability-map.md)
 
 ## API Design Principles
 
@@ -158,5 +161,5 @@ Channel parity depends on a consistent core data model, clear API contracts, and
 | Audit | Business lifecycle changes emit immutable audit events |
 | Reliability | Critical write APIs use idempotency and traceable request identifiers |
 | Cloud | AWS-first target architecture using EKS, Aurora PostgreSQL, MSK, Redis, OpenSearch, S3, and CloudWatch/OpenTelemetry |
-| CI/CD | GitHub Actions with quality gates, environment approvals, image scanning, and progressive deployment |
+| CI/CD | GitHub Actions for CI, Helm for packaging, Argo CD for GitOps delivery, and EKS for runtime |
 | Testing | Unit, integration, contract, E2E, migration, performance, security, and resilience testing |

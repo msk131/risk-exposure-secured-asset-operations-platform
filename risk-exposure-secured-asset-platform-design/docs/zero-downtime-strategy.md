@@ -11,6 +11,7 @@ Zero downtime requires coordinated application, database, routing, and data sync
 | Canary deployment | Gradual traffic increase with metric-based validation |
 | Feature flags | Decouple deployment from user-visible release |
 | Shadow traffic | Compare new behavior before production cutover |
+| GitOps sync waves | Coordinate ordered deployment of dependencies through Argo CD |
 
 ## Database Change Pattern
 
@@ -29,6 +30,8 @@ Use expand-contract:
 - Consumer replay support.
 - Retry, timeout, and circuit-breaker patterns.
 - Health checks and readiness probes.
+- Argo CD health checks and sync status.
+- Helm chart values that support canary, blue/green, and rollback configuration.
 - Fast rollback for application changes.
 - Roll-forward or compensation plan for irreversible data changes.
 
@@ -41,4 +44,3 @@ Use expand-contract:
 - Rollback route is tested.
 - Support team and business owner are available.
 - Production approval evidence is captured.
-

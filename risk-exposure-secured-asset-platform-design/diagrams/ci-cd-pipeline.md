@@ -7,7 +7,10 @@ flowchart LR
     INTEGRATION["Integration and Contract Tests"]
     SECURITY["SAST Dependency Secret Image Scan"]
     BUILD["Build Container Image"]
-    DEV["Deploy Dev"]
+    ECR["Push Image to ECR"]
+    HELM["Update Helm Values or GitOps Manifest"]
+    ARGO["Argo CD Sync"]
+    DEV["Deploy Dev on EKS"]
     E2E["E2E Tests"]
     STAGE["Deploy Staging"]
     PERF["Performance Tests"]
@@ -19,7 +22,10 @@ flowchart LR
     QUALITY --> INTEGRATION
     INTEGRATION --> SECURITY
     SECURITY --> BUILD
-    BUILD --> DEV
+    BUILD --> ECR
+    ECR --> HELM
+    HELM --> ARGO
+    ARGO --> DEV
     DEV --> E2E
     E2E --> STAGE
     STAGE --> PERF
@@ -27,4 +33,3 @@ flowchart LR
     APPROVAL --> PROD
     PROD --> VERIFY
 ```
-

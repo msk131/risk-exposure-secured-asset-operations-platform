@@ -86,7 +86,7 @@ This project covers:
 - Service-owned data model
 - Event-driven integration
 - AWS target cloud architecture
-- CI/CD, DevSecOps, testing, and zero-downtime strategy
+- GitHub Actions, Helm, Argo CD, EKS, DevSecOps, testing, and zero-downtime strategy
 - Omnichannel access across web, mobile, branch, and partner channels
 - Observability, DevSecOps, and production readiness
 - New platform architecture decisions
