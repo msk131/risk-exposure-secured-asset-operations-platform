@@ -23,7 +23,7 @@ This repository stores diagrams as Mermaid Markdown. GitHub can render these dia
 
 ```bash
 npm install -g @mermaid-js/mermaid-cli
-mmdc -i schema-migration-toolkit/diagrams/schema-evolution-flow.md -o schema-evolution-flow.svg
+mmdc -i risk-exposure-secured-asset-platform-design/diagrams/target-cloud-architecture.md -o target-cloud-architecture.svg
 ```
 
 ## Recommended Portfolio Diagram Set
@@ -34,7 +34,12 @@ mmdc -i schema-migration-toolkit/diagrams/schema-evolution-flow.md -o schema-evo
 | `data-reconciliation-flow.md` | Shows zero-loss migration and controls |
 | `oracle-tuning-workflow.md` | Shows database optimization expertise |
 | `schema-evolution-flow.md` | Shows schema migration governance |
+| `auth-rbac-migration-flow.md` | Shows access-control migration strategy |
+| `coexistence-data-sync-flow.md` | Shows phased migration data sync |
 | `legacy-architecture.md` | Shows the 2005-era source system baseline |
 | `legacy-data-pipeline.md` | Shows old-tech file and batch processing |
-| `logical-finance-erd.md` | Shows data modeling ability |
-| `deployment-view.md` | Shows platform and DevSecOps awareness |
+| `target-cloud-architecture.md` | Shows AWS target architecture |
+| `ci-cd-pipeline.md` | Shows DevSecOps delivery flow |
+| `zero-downtime-release-flow.md` | Shows progressive release strategy |
+| `testing-pyramid.md` | Shows test strategy |
+

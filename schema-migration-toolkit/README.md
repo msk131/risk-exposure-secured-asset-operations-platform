@@ -9,8 +9,10 @@ The goal is to demonstrate expertise in data modeling, schema evolution, migrati
 - Design logical and physical data models.
 - Create ER diagrams for core business domains.
 - Establish clear data ownership by capability or service.
+- Plan authentication and RBAC migration from legacy roles to target authorization models.
 - Manage versioned schema migrations through repeatable tooling.
 - Use expand-contract patterns for low-risk schema evolution.
+- Maintain data synchronization while legacy and target systems run in parallel.
 - Validate migrated data through reconciliation and quality checks.
 - Maintain auditability for database changes.
 - Define rollback or compensation strategies for high-risk changes.
@@ -23,6 +25,8 @@ The goal is to demonstrate expertise in data modeling, schema evolution, migrati
 | Migration tooling | Version and automate database schema changes |
 | Expand-contract migration | Support zero-downtime schema evolution |
 | Data quality rules | Detect duplicates, corrupt records, missing values, and invalid states |
+| Auth and RBAC migration | Map legacy users, groups, roles, permissions, and service accounts to target controls |
+| Data sync during coexistence | Keep legacy and target data aligned during phased migration |
 | Reconciliation | Compare legacy and target records after migration |
 | Governance | Add approval, audit, rollback, and release controls |
 
@@ -40,14 +44,17 @@ The goal is to demonstrate expertise in data modeling, schema evolution, migrati
 
 - [schema-evolution-flow.md](diagrams/schema-evolution-flow.md)
 - [logical-finance-erd.md](diagrams/logical-finance-erd.md)
+- [auth-rbac-migration-flow.md](diagrams/auth-rbac-migration-flow.md)
+- [coexistence-data-sync-flow.md](diagrams/coexistence-data-sync-flow.md)
 
 ## Detailed Docs
 
 - [schema-design-guide.md](docs/schema-design-guide.md)
 - [migration-tooling-strategy.md](docs/migration-tooling-strategy.md)
 - [schema-release-governance.md](docs/schema-release-governance.md)
+- [auth-rbac-migration.md](docs/auth-rbac-migration.md)
+- [coexistence-data-sync.md](docs/coexistence-data-sync.md)
 
 ## Plan
 
 See [plan.md](plan.md).
-

@@ -112,6 +112,19 @@ Detailed design docs:
 - [service-design.md](docs/service-design.md)
 - [data-ownership.md](docs/data-ownership.md)
 - [observability-and-devsecops.md](docs/observability-and-devsecops.md)
+- [target-technology-strategy.md](docs/target-technology-strategy.md)
+- [microservice-database-strategy.md](docs/microservice-database-strategy.md)
+- [cloud-architecture-strategy.md](docs/cloud-architecture-strategy.md)
+- [ci-cd-and-devsecops-strategy.md](docs/ci-cd-and-devsecops-strategy.md)
+- [testing-strategy.md](docs/testing-strategy.md)
+- [zero-downtime-strategy.md](docs/zero-downtime-strategy.md)
+
+Technology diagrams:
+
+- [target-cloud-architecture.md](diagrams/target-cloud-architecture.md)
+- [ci-cd-pipeline.md](diagrams/ci-cd-pipeline.md)
+- [zero-downtime-release-flow.md](diagrams/zero-downtime-release-flow.md)
+- [testing-pyramid.md](diagrams/testing-pyramid.md)
 
 ## API Design Principles
 
@@ -144,3 +157,6 @@ Channel parity depends on a consistent core data model, clear API contracts, and
 | Reporting | Reporting uses read models to avoid loading operational tables |
 | Audit | Business lifecycle changes emit immutable audit events |
 | Reliability | Critical write APIs use idempotency and traceable request identifiers |
+| Cloud | AWS-first target architecture using EKS, Aurora PostgreSQL, MSK, Redis, OpenSearch, S3, and CloudWatch/OpenTelemetry |
+| CI/CD | GitHub Actions with quality gates, environment approvals, image scanning, and progressive deployment |
+| Testing | Unit, integration, contract, E2E, migration, performance, security, and resilience testing |

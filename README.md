@@ -63,6 +63,8 @@ This project covers:
 - Microservice boundaries
 - Service-owned data model
 - Event-driven integration
+- AWS target cloud architecture
+- CI/CD, DevSecOps, testing, and zero-downtime strategy
 - Omnichannel access across web, mobile, branch, and partner channels
 - Observability, DevSecOps, and production readiness
 - New platform architecture decisions
@@ -95,6 +97,8 @@ This project covers:
 - Versioned schema migrations
 - Flyway/Liquibase-style migration workflows
 - Expand-contract database migration patterns
+- Auth/RBAC migration from legacy roles to target access controls
+- Coexistence data sync during phased migration
 - Data quality, lineage, validation, and reconciliation
 - Rollback, audit, and release governance
 
