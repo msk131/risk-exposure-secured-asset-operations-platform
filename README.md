@@ -10,14 +10,16 @@ Legacy financial platforms often depend on monolithic applications, shared Oracl
 
 This project shows a structured approach to solving those problems:
 
-- Understand the legacy platform and its operational risks.
-- Improve Oracle database performance before and during migration.
-- Define a target microservice and cloud architecture.
-- Separate service-owned data from shared legacy schemas.
-- Use phased migration instead of a risky big-bang replacement.
-- Validate legacy and target systems through reconciliation and parallel run.
-- Protect financial data integrity with audit, rollback, idempotency, and event-driven controls.
-- Prepare the system for production operations, monitoring, security, and controlled cutover.
+| Focus | Approach |
+| --- | --- |
+| <img src="assets/icons/legacy.svg" width="22" alt="Legacy platform icon"> Legacy baseline | Understand the legacy platform and its operational risks |
+| <img src="assets/icons/database.svg" width="22" alt="Database icon"> Database performance | Improve Oracle database performance before and during migration |
+| <img src="assets/icons/platform.svg" width="22" alt="Platform icon"> Target architecture | Define a target microservice and cloud architecture |
+| <img src="assets/icons/schema.svg" width="22" alt="Schema icon"> Data ownership | Separate service-owned data from shared legacy schemas |
+| <img src="assets/icons/migration.svg" width="22" alt="Migration icon"> Phased migration | Use phased migration instead of a risky big-bang replacement |
+| <img src="assets/icons/risk.svg" width="22" alt="Risk control icon"> Reconciliation | Validate legacy and target systems through reconciliation and parallel run |
+| <img src="assets/icons/devsecops.svg" width="22" alt="Operations control icon"> Controls | Protect financial data integrity with audit, rollback, idempotency, and event-driven controls |
+| <img src="assets/icons/innovation.svg" width="22" alt="Modernization icon"> Operations | Prepare the system for production operations, monitoring, security, and controlled cutover |
 
 ## Project Structure
 
