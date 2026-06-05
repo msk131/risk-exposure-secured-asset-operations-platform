@@ -23,11 +23,11 @@ This project shows a structured approach to solving those problems:
 
 | Area | Purpose |
 | --- | --- |
-| [legacy-asset-management-platform](legacy-asset-management-platform/README.md) | Describes the 2005-era legacy baseline used for migration planning |
-| [database-optimization-expert-strategy](database-optimization-expert-strategy/README.md) | Covers Oracle performance tuning, execution plans, indexing, partitioning, and rollout controls |
-| [schema-migration-toolkit](schema-migration-toolkit/README.md) | Covers schema evolution, expand-contract migration, data sync, access migration, and release governance |
-| [finance-system-migration-strategy](finance-system-migration-strategy/README.md) | Covers phased migration, reconciliation, cutover, rollback, and risk controls |
-| [risk-exposure-secured-asset-platform-design](risk-exposure-secured-asset-platform-design/README.md) | Defines the target platform architecture, services, data ownership, events, testing, security, and operations |
+| <img src="assets/icons/legacy.svg" width="22" alt="Legacy platform icon"> [legacy-asset-management-platform](legacy-asset-management-platform/README.md) | Describes the 2005-era legacy baseline used for migration planning |
+| <img src="assets/icons/database.svg" width="22" alt="Database icon"> [database-optimization-expert-strategy](database-optimization-expert-strategy/README.md) | Covers Oracle performance tuning, execution plans, indexing, partitioning, and rollout controls |
+| <img src="assets/icons/schema.svg" width="22" alt="Schema icon"> [schema-migration-toolkit](schema-migration-toolkit/README.md) | Covers schema evolution, expand-contract migration, data sync, access migration, and release governance |
+| <img src="assets/icons/migration.svg" width="22" alt="Migration icon"> [finance-system-migration-strategy](finance-system-migration-strategy/README.md) | Covers phased migration, reconciliation, cutover, rollback, and risk controls |
+| <img src="assets/icons/platform.svg" width="22" alt="Platform icon"> [risk-exposure-secured-asset-platform-design](risk-exposure-secured-asset-platform-design/README.md) | Defines the target platform architecture, services, data ownership, events, testing, security, and operations |
 
 ## Outcome
 
