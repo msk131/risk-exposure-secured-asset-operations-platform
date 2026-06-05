@@ -1,171 +1,40 @@
 # Risk Exposure & Secured Asset Platform Design
 
-This project defines the target-state design for a modern Risk Exposure & Secured Asset Operations Platform.
+This project defines the target-state platform architecture.
 
-## Design Objectives
+## What This Project Solves
 
-- Create an API-first platform that supports web, mobile, branch, and partner channels.
-- Replace tightly coupled legacy behavior with domain-aligned services.
-- Give services clear ownership of their data.
-- Support transaction history, account balances, agreements, exposures, secured assets, instructions, and audit trails.
-- Enable event-driven reporting and integration.
-- Build observability, security, and DevSecOps into the platform from the start.
+The legacy platform needs to evolve into a service-oriented architecture with clear data ownership, controlled APIs, event-driven integration, auditability, observability, security, and zero-downtime release patterns.
 
-## Target Architecture
+## Core Platform Scope
 
-```mermaid
-flowchart LR
-    subgraph Channels
-        WEB[Web]
-        MOB[Mobile]
-        BRANCH[Branch / Assisted Channel]
-        PARTNER[Partner / Third Party]
-    end
+- Party, account, agreement, exposure, secured asset, instruction, reporting, and audit services.
+- Service-owned databases instead of shared mutable schemas.
+- Event-driven reporting and audit flows.
+- Transactional outbox, idempotency, saga, shadow testing, and Kafka resiliency controls.
+- Cloud, deployment, testing, security, observability, and operational readiness.
 
-    subgraph Edge
-        APIGW[API Gateway]
-        IAM[Identity and Access Control]
-    end
+## Key Artifacts
 
-    subgraph Services
-        PARTY[Party Service]
-        ACCOUNT[Account Service]
-        AGREEMENT[Agreement Service]
-        EXPOSURE[Exposure Service]
-        ASSET[Secured Asset Service]
-        INSTRUCTION[Instruction Service]
-        REPORTING[Reporting Service]
-        AUDIT[Audit Service]
-    end
-
-    subgraph Data
-        PARTYDB[(Party DB)]
-        ACCOUNTDB[(Account DB)]
-        AGREEMENTDB[(Agreement DB)]
-        EXPOSUREDB[(Exposure DB)]
-        ASSETDB[(Secured Asset DB)]
-        AUDITDB[(Immutable Audit Store)]
-        READMODEL[(Reporting Read Model)]
-    end
-
-    BUS[Event Bus]
-
-    WEB --> APIGW
-    MOB --> APIGW
-    BRANCH --> APIGW
-    PARTNER --> APIGW
-    APIGW --> IAM
-
-    APIGW --> PARTY
-    APIGW --> ACCOUNT
-    APIGW --> AGREEMENT
-    APIGW --> EXPOSURE
-    APIGW --> ASSET
-    APIGW --> INSTRUCTION
-    APIGW --> REPORTING
-
-    PARTY --> PARTYDB
-    ACCOUNT --> ACCOUNTDB
-    AGREEMENT --> AGREEMENTDB
-    EXPOSURE --> EXPOSUREDB
-    ASSET --> ASSETDB
-    AUDIT --> AUDITDB
-    REPORTING --> READMODEL
-
-    PARTY --> BUS
-    ACCOUNT --> BUS
-    AGREEMENT --> BUS
-    EXPOSURE --> BUS
-    ASSET --> BUS
-    INSTRUCTION --> BUS
-    BUS --> AUDIT
-    BUS --> READMODEL
-```
-
-## Domain Services
-
-| Service | Responsibility |
+| Artifact | Purpose |
 | --- | --- |
-| Party Service | Customer, counterparty, legal entity, or participant reference data |
-| Account Service | Account profile, account status, and balance context |
-| Agreement Service | Agreement rules, eligibility, and lifecycle |
-| Exposure Service | Risk exposure, position, valuation, and obligation view |
-| Secured Asset Service | Eligible assets, inventory, allocation, and substitution |
-| Instruction Service | Operational instructions, workflow status, and settlement-style actions |
-| Reporting Service | Read models, operational reports, and channel-safe projections |
-| Audit Service | Immutable business and technical audit events |
+| [service-design.md](docs/service-design.md) | Service boundaries, API categories, and cross-cutting requirements |
+| [data-ownership.md](docs/data-ownership.md) | Service ownership for core data entities |
+| [microservice-database-strategy.md](docs/microservice-database-strategy.md) | Service-owned database strategy |
+| [transactional-outbox-and-event-contract.md](docs/transactional-outbox-and-event-contract.md) | Event publishing contract and outbox table |
+| [idempotency-and-deduplication-standard.md](docs/idempotency-and-deduplication-standard.md) | Safe retry and duplicate protection |
+| [saga-state-machine.md](docs/saga-state-machine.md) | Cross-service workflow and compensation model |
+| [shadow-testing-and-traceability.md](docs/shadow-testing-and-traceability.md) | Parallel validation, side-effect blocking, and trace context |
+| [kafka-resiliency-policy.md](docs/kafka-resiliency-policy.md) | Retry, Dead Letter Queue, ordering, and version checks |
+| [security-lineage-slo-chaos.md](docs/security-lineage-slo-chaos.md) | Security, lineage, service objectives, and resilience verification |
+| [zero-downtime-strategy.md](docs/zero-downtime-strategy.md) | Deployment and cutover safety |
+| [testing-strategy.md](docs/testing-strategy.md) | Test layers and critical scenarios |
 
-## Data Modeling
+## Diagrams
 
-ER diagrams live in [diagrams](diagrams/).
-
-Start with [core-domain-erd.md](diagrams/core-domain-erd.md).
-
-Additional diagrams:
-
+- [core-domain-erd.md](diagrams/core-domain-erd.md)
+- [target-cloud-architecture.md](diagrams/target-cloud-architecture.md)
 - [service-interaction-flow.md](diagrams/service-interaction-flow.md)
 - [event-driven-reporting.md](diagrams/event-driven-reporting.md)
 - [deployment-view.md](diagrams/deployment-view.md)
-
-Detailed design docs:
-
-- [service-design.md](docs/service-design.md)
-- [data-ownership.md](docs/data-ownership.md)
-- [observability-and-devsecops.md](docs/observability-and-devsecops.md)
-- [target-technology-strategy.md](docs/target-technology-strategy.md)
-- [microservice-database-strategy.md](docs/microservice-database-strategy.md)
-- [transactional-outbox-and-event-contract.md](docs/transactional-outbox-and-event-contract.md)
-- [idempotency-and-deduplication-standard.md](docs/idempotency-and-deduplication-standard.md)
-- [saga-state-machine.md](docs/saga-state-machine.md)
-- [shadow-testing-and-traceability.md](docs/shadow-testing-and-traceability.md)
-- [kafka-resiliency-policy.md](docs/kafka-resiliency-policy.md)
-- [security-lineage-slo-chaos.md](docs/security-lineage-slo-chaos.md)
-- [cloud-architecture-strategy.md](docs/cloud-architecture-strategy.md)
-- [ci-cd-and-devsecops-strategy.md](docs/ci-cd-and-devsecops-strategy.md)
-- [testing-strategy.md](docs/testing-strategy.md)
-- [zero-downtime-strategy.md](docs/zero-downtime-strategy.md)
-- [modernization-value-map.md](docs/modernization-value-map.md)
-
-Technology diagrams:
-
-- [target-cloud-architecture.md](diagrams/target-cloud-architecture.md)
-- [ci-cd-pipeline.md](diagrams/ci-cd-pipeline.md)
 - [zero-downtime-release-flow.md](diagrams/zero-downtime-release-flow.md)
-- [testing-pyramid.md](diagrams/testing-pyramid.md)
-- [gitops-deployment-flow.md](diagrams/gitops-deployment-flow.md)
-- [legacy-to-modern-capability-map.md](diagrams/legacy-to-modern-capability-map.md)
-
-## API Design Principles
-
-- Expose business capabilities through REST APIs.
-- Keep APIs versioned and contract-tested.
-- Avoid direct channel access to service databases.
-- Use idempotency keys for write operations.
-- Emit domain events for important lifecycle changes.
-- Keep audit and trace identifiers across service calls.
-
-## Omnichannel Experience
-
-The target platform should provide consistent data and workflows across:
-
-- Web
-- Mobile
-- Branch or assisted channels
-- Partner and third-party integrations
-- Operational dashboards
-
-Channel parity depends on a consistent core data model, clear API contracts, and controlled read models.
-
-## Architecture Decisions
-
-| Decision | Direction |
-| --- | --- |
-| API access | Channels access business capabilities through APIs, not direct database calls |
-| Data ownership | Each service owns its operational data store |
-| Integration | Domain events update audit, reporting, and downstream integrations |
-| Reporting | Reporting uses read models to avoid loading operational tables |
-| Audit | Business lifecycle changes emit immutable audit events |
-| Reliability | Critical write APIs use idempotency and traceable request identifiers |
-| Cloud | AWS-first target architecture using EKS, Aurora PostgreSQL, MSK, Redis, OpenSearch, S3, and CloudWatch/OpenTelemetry |
-| CI/CD | GitHub Actions for CI, Helm for packaging, Argo CD for GitOps delivery, and EKS for runtime |
-| Testing | Unit, integration, contract, E2E, migration, performance, security, and resilience testing |

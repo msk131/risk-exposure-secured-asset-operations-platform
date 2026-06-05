@@ -1,123 +1,23 @@
 # General Finance System Migration Strategy
 
-This project defines a general finance system migration strategy for moving from legacy platforms to modern, resilient, and auditable applications.
+This project defines the migration approach for moving regulated financial systems from legacy platforms to modern applications.
 
-The strategy can apply to core banking, lending, payments, reporting, risk, operations, customer servicing, or other regulated finance systems where data integrity, auditability, performance, and business continuity are critical.
+## What This Project Solves
 
-## Migration Objectives
+Banking migrations must preserve data integrity, auditability, security, and business continuity while traffic gradually moves from old systems to new systems. This project focuses on phased migration, reconciliation, parallel run, cutover, rollback, and risk controls.
 
-- Preserve data integrity with zero-loss mapping for customer, account, transaction, balance, product, agreement, and operational records.
-- Cleanse duplicate, outdated, corrupt, and incomplete data before migration.
-- Run legacy and new flows in parallel before final cutover.
-- Maintain immutable audit trails during and after migration.
-- Protect sensitive data through encryption, privacy controls, and least-privilege access.
-- Minimize downtime through phased cutover and rehearsed rollback.
-- Improve Oracle database performance before and during migration.
+## Key Artifacts
 
-## Migration Architecture
-
-Detailed architecture: [migration-architecture.md](docs/migration-architecture.md)
-
-The migration architecture supports coexistence between a legacy finance system and a target modern application. Traffic can move gradually by capability, customer segment, region, channel, product, or workflow.
-
-## Diagrams
-
-| Diagram | Purpose |
+| Artifact | Purpose |
 | --- | --- |
-| [migration-roadmap.md](diagrams/migration-roadmap.md) | End-to-end migration lifecycle and delivery phases |
-| [data-reconciliation-flow.md](diagrams/data-reconciliation-flow.md) | Data profiling, cleansing, mapping, validation, and reconciliation |
-| [cutover-runbook-flow.md](diagrams/cutover-runbook-flow.md) | Production cutover decision flow with rollback path |
+| [migration-architecture.md](docs/migration-architecture.md) | Coexistence architecture for legacy and target platforms |
+| [reconciliation-strategy.md](docs/reconciliation-strategy.md) | Source-target comparison, tolerance, exception severity, and rounding rules |
+| [risk-control-matrix.md](docs/risk-control-matrix.md) | Migration risks, controls, evidence, and control gates |
+| [day-2-rollback-runbook.md](docs/day-2-rollback-runbook.md) | Rollback procedure after target traffic has started |
+| [migration-roadmap.md](diagrams/migration-roadmap.md) | Migration lifecycle diagram |
+| [data-reconciliation-flow.md](diagrams/data-reconciliation-flow.md) | Reconciliation flow diagram |
+| [cutover-runbook-flow.md](diagrams/cutover-runbook-flow.md) | Cutover and rollback decision flow |
 
-## Data Integrity And Migration Controls
+## Outcome
 
-| Control | Purpose |
-| --- | --- |
-| Zero-loss mapping | Ensure critical records move with complete accuracy |
-| Data cleansing | Remove or quarantine duplicate, outdated, corrupt, or inconsistent records |
-| Parallel run | Operate legacy and new flows concurrently for validation |
-| Reconciliation | Compare counts, balances, statuses, lifecycle events, and exceptions |
-| Cutover sign-off | Require business and technology approval before final traffic migration |
-
-## Regulatory, Security, And Compliance Controls
-
-| Control | Purpose |
-| --- | --- |
-| Immutable audit trail | Capture migration actions, approvals, exceptions, and data changes |
-| Encryption at rest | Protect stored sensitive data in databases, backups, staging, and archives |
-| Encryption in transit | Protect API, event, replication, and migration traffic |
-| Access controls | Enforce least privilege for users, services, and migration jobs |
-| Privacy controls | Support retention, minimization, masking, and controlled access |
-
-## Migration Phases
-
-### Phase 1: Discovery
-
-- Inventory applications, jobs, tables, stored procedures, interfaces, and owners.
-- Map business capabilities and critical user journeys.
-- Identify shared databases and hidden consumers.
-- Classify finance-domain data such as customers, accounts, balances, transactions, products, agreements, limits, instructions, and reporting outputs.
-- Establish performance, reliability, and data quality baselines.
-
-### Phase 2: Data And Performance Readiness
-
-- Define zero-loss data mapping rules.
-- Profile and cleanse legacy data.
-- Identify top Oracle SQL and batch bottlenecks.
-- Tune critical SQL, indexes, statistics, and batch execution paths.
-- Prepare reconciliation rules and exception workflows.
-
-### Phase 3: Coexistence Build
-
-- Introduce API gateway or routing layer.
-- Create migration staging and synchronization jobs.
-- Add audit, observability, and migration dashboards.
-- Prepare target schema and service-owned data stores.
-
-### Phase 4: Parallel Run
-
-- Run legacy and new flows together.
-- Compare transaction history, balances, statuses, reports, calculations, and operational outputs.
-- Review exceptions and fix mapping or logic gaps.
-- Agree readiness thresholds for traffic migration.
-
-### Phase 5: Phased Cutover
-
-- Move low-risk capabilities first.
-- Shift traffic by workflow, channel, segment, or region.
-- Schedule high-risk transitions during low-activity windows.
-- Monitor business and technical metrics.
-- Execute rollback if validation fails.
-
-### Phase 6: Decommission
-
-- Retire obsolete tables, jobs, interfaces, and code paths.
-- Archive historical data based on retention rules.
-- Remove dual-run processes after sign-off.
-- Update operational documentation and support runbooks.
-
-## Oracle Performance Improvement Plan
-
-| Area | Activities |
-| --- | --- |
-| Baseline | Capture AWR-style metrics, top SQL, batch duration, wait events, and volume profile |
-| SQL tuning | Review execution plans, predicates, joins, bind variables, and cardinality |
-| Index strategy | Add, adjust, or remove indexes based on access patterns and maintenance cost |
-| Statistics | Review stale or misleading optimizer statistics |
-| Batch tuning | Replace row-by-row processing, tune commits, and reduce database round trips |
-| Regression control | Add performance validation before production rollout |
-
-## Detailed Planning Artifacts
-
-- [migration-architecture.md](docs/migration-architecture.md)
-- [risk-control-matrix.md](docs/risk-control-matrix.md)
-- [reconciliation-strategy.md](docs/reconciliation-strategy.md)
-- [day-2-rollback-runbook.md](docs/day-2-rollback-runbook.md)
-
-## Success Metrics
-
-- Reconciliation pass rate meets agreed threshold.
-- No critical data loss across mapped entities.
-- Batch window reduced for selected workloads.
-- Downtime stays within approved window.
-- Production incidents reduce after migration.
-- Legacy components are retired with evidence.
+The goal is to migrate capability by capability while proving that the target platform matches the legacy platform before final cutover.

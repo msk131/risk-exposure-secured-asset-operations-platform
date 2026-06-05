@@ -1,44 +1,21 @@
 # Schema Migration Toolkit
 
-This project defines a schema design and migration toolkit for modernizing regulated finance systems while keeping production releases controlled, auditable, and reversible.
+This project defines the schema migration controls needed when moving from shared legacy tables to service-owned data models.
 
-The goal is to demonstrate expertise in data modeling, schema evolution, migration automation, data quality validation, reconciliation, and database release governance.
+## What This Project Solves
 
-## Toolkit Objectives
+Financial migrations require database changes without breaking live applications. This project covers expand-contract migration, versioned schema releases, coexistence data sync, access migration, data quality checks, and release governance.
 
-- Design logical and physical data models.
-- Create ER diagrams for core business domains.
-- Establish clear data ownership by capability or service.
-- Plan authentication and RBAC migration from legacy roles to target authorization models.
-- Manage versioned schema migrations through repeatable tooling.
-- Use expand-contract patterns for low-risk schema evolution.
-- Maintain data synchronization while legacy and target systems run in parallel.
-- Validate migrated data through reconciliation and quality checks.
-- Maintain auditability for database changes.
-- Define rollback or compensation strategies for high-risk changes.
+## Key Artifacts
 
-## Core Capabilities
-
-| Capability | Purpose |
+| Artifact | Purpose |
 | --- | --- |
-| Data modeling | Define entities, relationships, keys, and ownership |
-| Migration tooling | Version and automate database schema changes |
-| Expand-contract migration | Support zero-downtime schema evolution |
-| Data quality rules | Detect duplicates, corrupt records, missing values, and invalid states |
-| Auth and RBAC migration | Map legacy users, groups, roles, permissions, and service accounts to target controls |
-| Data sync during coexistence | Keep legacy and target data aligned during phased migration |
-| Reconciliation | Compare legacy and target records after migration |
-| Governance | Add approval, audit, rollback, and release controls |
-
-## Recommended Tooling
-
-| Tool | Best Fit |
-| --- | --- |
-| Flyway | SQL-first migration versioning |
-| Liquibase | Structured changelogs, rollback metadata, governance-heavy environments |
-| DB migration pipeline | CI/CD validation, dry run, deployment, post-checks |
-| Reconciliation jobs | Source-target validation and exception reporting |
-| ERD tooling | Mermaid, draw.io, dbdiagram.io, DBeaver, or SQL Developer Data Modeler |
+| [schema-design-guide.md](docs/schema-design-guide.md) | Data modeling standards and anti-patterns to remove |
+| [migration-tooling-strategy.md](docs/migration-tooling-strategy.md) | Flyway/Liquibase-style migration workflow |
+| [schema-release-governance.md](docs/schema-release-governance.md) | Approval, rollback, constraint rollout, and expand-contract controls |
+| [coexistence-data-sync.md](docs/coexistence-data-sync.md) | Change Data Capture, replay, lag thresholds, and bridge-loop prevention |
+| [auth-rbac-migration.md](docs/auth-rbac-migration.md) | Authentication and Role-Based Access Control migration |
+| [plan.md](plan.md) | Working plan for the toolkit |
 
 ## Diagrams
 
@@ -46,15 +23,3 @@ The goal is to demonstrate expertise in data modeling, schema evolution, migrati
 - [logical-finance-erd.md](diagrams/logical-finance-erd.md)
 - [auth-rbac-migration-flow.md](diagrams/auth-rbac-migration-flow.md)
 - [coexistence-data-sync-flow.md](diagrams/coexistence-data-sync-flow.md)
-
-## Detailed Docs
-
-- [schema-design-guide.md](docs/schema-design-guide.md)
-- [migration-tooling-strategy.md](docs/migration-tooling-strategy.md)
-- [schema-release-governance.md](docs/schema-release-governance.md)
-- [auth-rbac-migration.md](docs/auth-rbac-migration.md)
-- [coexistence-data-sync.md](docs/coexistence-data-sync.md)
-
-## Plan
-
-See [plan.md](plan.md).
