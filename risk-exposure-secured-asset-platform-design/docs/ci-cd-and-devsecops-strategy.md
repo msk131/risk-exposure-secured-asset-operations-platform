@@ -1,6 +1,6 @@
 # CI/CD And DevSecOps Strategy
 
-GitHub Actions is the recommended CI system for the portfolio because it is visible in GitHub and supports environments, approvals, secrets, and deployment protection. Argo CD is the recommended continuous delivery tool for Kubernetes because it supports GitOps-based deployment, drift detection, auditable desired state, and safer environment promotion.
+GitHub Actions is the recommended Continuous Integration (CI) system because it is visible in GitHub and supports environments, approvals, secrets, and deployment protection. Argo CD is the recommended continuous delivery tool for Kubernetes because it supports GitOps-based deployment, drift detection, auditable desired state, and safer environment promotion.
 
 ## Recommended Delivery Model
 

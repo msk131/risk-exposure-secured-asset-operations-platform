@@ -26,7 +26,7 @@ npm install -g @mermaid-js/mermaid-cli
 mmdc -i risk-exposure-secured-asset-platform-design/diagrams/target-cloud-architecture.md -o target-cloud-architecture.svg
 ```
 
-## Recommended Portfolio Diagram Set
+## Recommended Architecture Diagram Set
 
 | Diagram | Why It Matters |
 | --- | --- |
@@ -44,4 +44,3 @@ mmdc -i risk-exposure-secured-asset-platform-design/diagrams/target-cloud-archit
 | `zero-downtime-release-flow.md` | Shows progressive release strategy |
 | `testing-pyramid.md` | Shows test strategy |
 | `legacy-to-modern-capability-map.md` | Shows what the modern stack enables over the legacy baseline |
-

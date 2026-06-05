@@ -1,14 +1,14 @@
 # Risk Exposure & Secured Asset Operations Platform
 
-This repository is a portfolio-style planning workspace for modernizing a legacy financial operations platform into a modern **Risk Exposure & Secured Asset Operations Platform**.
+This repository is a system architecture and migration planning workspace for modernizing a legacy financial operations platform into a modern **Risk Exposure & Secured Asset Operations Platform**.
 
 The platform concept is intentionally generic. It represents systems that manage financial exposure, secured assets, margin-style obligations, account or agreement context, transaction history, operational instructions, settlement workflows, auditability, and reporting.
 
-## Portfolio Project Summary
+## System Modernization Summary
 
-This project demonstrates my ability to plan and design enterprise modernization programs where legacy platforms must evolve into resilient, Application Programming Interface-first (API-first), service-oriented applications without disrupting business operations.
+This project defines an enterprise modernization blueprint for evolving legacy platforms into resilient, Application Programming Interface-first (API-first), service-oriented applications without disrupting business operations.
 
-It is positioned as an architecture and finance system migration strategy portfolio project focused on:
+It is structured as an architecture and finance system migration strategy focused on:
 
 - Legacy-to-modern migration strategy
 - Oracle database performance improvement
@@ -19,7 +19,7 @@ It is positioned as an architecture and finance system migration strategy portfo
 - Parallel-run validation, phased cutover, and rollback planning
 - Audit trails, encryption, access control, and regulatory readiness
 - Information Technology (IT) and business risk identification for availability, performance, and resiliency
-- Current technology adoption across cyber security, Artificial Intelligence (AI), Machine Learning (ML), data engineering, and cloud-native delivery
+- Current technology adoption across cyber security, data engineering, observability, and cloud-native delivery
 
 ## System Architecture Snapshot
 
@@ -65,9 +65,9 @@ It is positioned as an architecture and finance system migration strategy portfo
 | Architecture Decision Records (ADRs) | [docs/adr](docs/adr/) | Captures binding decisions for Change Data Capture (CDC), outbox, saga, shadow traffic, service-owned databases, and expand-contract migration |
 | GitHub workflow | [github-workflow.md](docs/github-workflow.md) | Defines issue templates, labels, evidence expectations, and project-board states |
 
-## My Positioning
+## Engineering Leadership Scope
 
-I position myself as a legacy-to-modern migration specialist with deep experience in:
+This workspace is designed around the responsibilities expected from a senior or staff engineer leading a regulated financial modernization program:
 
 - Enterprise platform modernization
 - Oracle database performance improvement
@@ -77,9 +77,9 @@ I position myself as a legacy-to-modern migration specialist with deep experienc
 - Parallel-run validation and phased cutover
 - Audit, security, compliance, and operational resilience
 - Development, Security, and Operations (DevSecOps) automation, observability, and engineering productivity
-- innovation adoption across Artificial Intelligence-assisted (AI-assisted) engineering, data pipelines, and cloud platforms
+- modernization adoption across data pipelines, observability, platform engineering, and cloud-native delivery
 
-My strength is connecting architecture with execution: I can assess a legacy estate, design the migration path, improve database performance, define target-state services and schemas, and lead delivery through testing, reconciliation, cutover, and decommissioning.
+The core engineering focus is connecting architecture with execution: assess a legacy estate, design the migration path, improve database performance, define target-state services and schemas, and lead delivery through testing, reconciliation, cutover, and decommissioning.
 
 ## Visual Project Map
 
@@ -93,11 +93,11 @@ My strength is connecting architecture with execution: I can assess a legacy est
 
 ## Leadership Themes
 
-| Theme | Portfolio Evidence |
+| Theme | Architecture Evidence |
 | --- | --- |
-| <img src="assets/icons/risk.svg" width="24" alt="Risk icon"> Risk and resiliency | [Risk Opportunity And Innovation Strategy](docs/risk-opportunity-innovation-strategy.md) |
+| <img src="assets/icons/risk.svg" width="24" alt="Risk icon"> Risk and resiliency | [Risk Opportunity And Modernization Strategy](docs/risk-opportunity-innovation-strategy.md) |
 | <img src="assets/icons/devsecops.svg" width="24" alt="DevSecOps icon"> Development, Security, and Operations (DevSecOps) and quality | Continuous Integration and Continuous Delivery (CI/CD), testing, security scans, progressive deployment, rollback controls |
-| <img src="assets/icons/innovation.svg" width="24" alt="Innovation icon"> Innovation and modern technology | Artificial Intelligence-assisted (AI-assisted) engineering, data engineering, observability, cloud-native architecture |
+| <img src="assets/icons/innovation.svg" width="24" alt="Innovation icon"> Modern technology adoption | Data engineering, observability, platform engineering, cloud-native architecture |
 
 ## Staff Engineer Review
 

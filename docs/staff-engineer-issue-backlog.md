@@ -8,7 +8,7 @@ For full forms and short definitions of abbreviations used in this backlog, see 
 
 | Area | Current State | Staff-Level Gap |
 | --- | --- | --- |
-| Main README | Strong portfolio narrative and project map | Needs a scannable target stack, Non-Functional Requirement (NFR) block, and direct links to critical diagrams and runbooks |
+| Main README | Strong architecture narrative and project map | Needs a scannable target stack, Non-Functional Requirement (NFR) block, and direct links to critical diagrams and runbooks |
 | Migration architecture | Shows coexistence, Change Data Capture (CDC), staging, reconciliation, and audit | Missing explicit Change Data Capture (CDC) ordering, replay, lag, and cutover guardrail thresholds |
 | Reconciliation | Defines scope and broad tolerances | Missing deterministic hash strategy, rounding policy, severity model, and exception Service Level Agreement (SLA) |
 | Core Entity Relationship Diagram (ERD) | Captures main business entities | Missing bitemporal fields, immutable ledger/audit separation, ownership metadata, and outbox structures |
@@ -21,7 +21,7 @@ For full forms and short definitions of abbreviations used in this backlog, see 
 
 ## Priority Issue List
 
-### ~~Issue 1: [DOCS] Promote README From Portfolio Narrative To System Architecture Entry Point~~
+### ~~Issue 1: [DOCS] Promote README From Architecture Narrative To System Architecture Entry Point~~
 
 Status: Done. The root README now includes a system architecture snapshot, target technology stack, critical architecture views, and direct links to reconciliation, schema governance, cutover, and Oracle performance artifacts.
 

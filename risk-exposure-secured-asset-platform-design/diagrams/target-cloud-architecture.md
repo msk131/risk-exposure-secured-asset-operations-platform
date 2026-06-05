@@ -36,6 +36,6 @@ flowchart TB
 
 ## Notes
 
-- EKS is the recommended portfolio target for Kubernetes-based platform engineering.
+- Elastic Kubernetes Service (EKS) is the recommended target for Kubernetes-based platform engineering.
 - Aurora PostgreSQL is the default relational database for service-owned data.
 - MSK supports event-driven integration, audit, reporting, and migration CDC flows.

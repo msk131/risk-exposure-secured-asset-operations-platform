@@ -39,10 +39,8 @@ This map explains what the 2005-era legacy platform could not achieve well and w
 - Track CDC lag, reconciliation status, Kafka consumer lag, API latency, and error rates.
 - Use retry, timeout, circuit breaker, idempotency, and replay patterns.
 
-## AI ML And Data Engineering Opportunities
+## Automation And Data Engineering Opportunities
 
-- Use AI coding assistants for refactoring support, test generation, and documentation drafts.
 - Use anomaly detection for batch duration, reconciliation breaks, CDC lag, and valuation variance.
 - Use Apache Spark or Apache Beam for large-scale transformation and enrichment.
 - Use object storage for replayable files, reports, lineage evidence, and archive data.
-

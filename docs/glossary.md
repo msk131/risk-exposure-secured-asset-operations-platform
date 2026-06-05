@@ -23,7 +23,6 @@ This glossary expands common banking, architecture, cloud, and migration terms u
 | IT | Information Technology | The discipline responsible for operating, securing, and supporting technology systems and infrastructure. |
 | KMS | Key Management Service | Amazon Web Services service for creating, storing, rotating, and controlling encryption keys. |
 | Kafka | Apache Kafka | Distributed event streaming platform used to publish, store, and consume high-volume messages. |
-| ML | Machine Learning | A branch of Artificial Intelligence where systems learn patterns from data to make predictions or classifications. |
 | MQ | Message Queue | Messaging middleware or pattern that lets systems exchange messages asynchronously. |
 | MSK | Managed Streaming for Apache Kafka | Amazon Web Services managed Apache Kafka service. |
 | mTLS | Mutual Transport Layer Security | A security pattern where both client and server authenticate each other using certificates. |

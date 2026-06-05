@@ -1,6 +1,6 @@
 # Cloud Architecture Strategy
 
-AWS is the recommended cloud target for this portfolio architecture.
+Amazon Web Services (AWS) is the recommended cloud target for this architecture.
 
 ## Recommended AWS Services
 
@@ -38,7 +38,7 @@ AWS is the recommended cloud target for this portfolio architecture.
 | EKS | You want Kubernetes, Helm, platform engineering, service mesh, and portable microservice operations |
 | ECS Fargate | You want simpler container hosting with less Kubernetes operational overhead |
 
-Recommended portfolio choice: **EKS + Helm + Argo CD** for the target architecture, with ECS Fargate listed as a simpler alternative.
+Recommended target choice: **Elastic Kubernetes Service (EKS) + Helm + Argo CD** for the target architecture, with Elastic Container Service (ECS) Fargate listed as a simpler alternative.
 
 ## GitOps Runtime Model
 
