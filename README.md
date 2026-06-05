@@ -6,7 +6,7 @@ The platform concept is intentionally generic. It represents systems that manage
 
 ## Portfolio Project Summary
 
-This project demonstrates my ability to plan and design enterprise modernization programs where legacy platforms must evolve into resilient, API-first, service-oriented applications without disrupting business operations.
+This project demonstrates my ability to plan and design enterprise modernization programs where legacy platforms must evolve into resilient, Application Programming Interface-first (API-first), service-oriented applications without disrupting business operations.
 
 It is positioned as an architecture and finance system migration strategy portfolio project focused on:
 
@@ -14,12 +14,56 @@ It is positioned as an architecture and finance system migration strategy portfo
 - Oracle database performance improvement
 - Zero-loss data mapping and reconciliation
 - Data cleansing, migration staging, and exception handling
-- API-first and microservices target architecture
-- ER modeling and service-owned schema design
+- Application Programming Interface-first (API-first) and microservices target architecture
+- Entity Relationship (ER) modeling and service-owned schema design
 - Parallel-run validation, phased cutover, and rollback planning
 - Audit trails, encryption, access control, and regulatory readiness
-- IT and business risk identification for availability, performance, and resiliency
-- Current technology adoption across cyber security, AI / ML, data engineering, and cloud-native delivery
+- Information Technology (IT) and business risk identification for availability, performance, and resiliency
+- Current technology adoption across cyber security, Artificial Intelligence (AI), Machine Learning (ML), data engineering, and cloud-native delivery
+
+## System Architecture Snapshot
+
+| Constraint | Target Direction |
+| --- | --- |
+| System tier | Regulated financial operations platform for exposure, secured assets, transaction history, audit, and reporting workflows |
+| Availability target | Designed toward 99.99 percent or higher availability for critical read/write operations, with exact Service Level Objectives (SLOs) defined per service |
+| Recovery Time Objective (RTO) | Critical platform recovery target measured in minutes, with rollback and failover procedures rehearsed before cutover |
+| Recovery Point Objective (RPO) | Zero data loss target for critical financial records through reconciliation, idempotency, audit events, and transactional messaging controls |
+| Data integrity | Zero-loss mapping, deterministic reconciliation, immutable audit trail, and explicit exception approval workflow |
+| Migration strategy | Phased coexistence using Change Data Capture (CDC), parallel run, shadow validation, cutover gates, and reversible rollout paths |
+| Security and privacy | Encryption in transit and at rest, least-privilege access, Role-Based Access Control (RBAC), secrets management, and Personally Identifiable Information (PII) protection |
+| Compliance readiness | Audit evidence, lineage, approval records, operational controls, and regulator-ready reconciliation reports |
+
+## Target Technology Stack
+
+| Layer | Target Technologies | Purpose |
+| --- | --- | --- |
+| Cloud platform | Amazon Web Services (AWS) | Target cloud foundation for compute, data, networking, and security services |
+| Container runtime | Elastic Kubernetes Service (EKS) | Run domain microservices with controlled scaling, health checks, and deployment strategies |
+| Service delivery | Helm, Argo CD, GitOps | Package, promote, and reconcile Kubernetes deployments from version-controlled release definitions |
+| Continuous delivery | GitHub Actions | Continuous Integration and Continuous Delivery (CI/CD) pipeline for tests, scans, packaging, and deployment checks |
+| Operational data | Aurora PostgreSQL | Service-owned relational databases for account, agreement, exposure, secured asset, instruction, and reconciliation data |
+| Event streaming | Managed Streaming for Apache Kafka (MSK/Kafka) | Event-driven integration, audit events, reporting projections, outbox publishing, and migration Change Data Capture (CDC) flows |
+| Cache and idempotency | Redis or Amazon ElastiCache for Redis | Low-latency cache, deduplication, idempotency checks, and workflow protection |
+| Search and reporting | OpenSearch, Simple Storage Service (S3) | Query-optimized search, operational reporting, report archive, and evidence storage |
+| Schema governance | Flyway or Liquibase | Versioned database changes, dry runs, approvals, rollback metadata, and release governance |
+| Observability | OpenTelemetry, CloudWatch, Prometheus, Grafana | Metrics, logs, distributed traces, dashboards, alerting, and migration readiness monitoring |
+| Security | Identity and Access Management (IAM), Secrets Manager, Key Management Service (KMS), Mutual Transport Layer Security (mTLS) | Least-privilege access, secret rotation, encryption keys, and service-to-service identity |
+
+## Critical Architecture Views
+
+| View | Link | Why It Matters |
+| --- | --- | --- |
+| Core Entity Relationship Diagram (ERD) | [core-domain-erd.md](risk-exposure-secured-asset-platform-design/diagrams/core-domain-erd.md) | Shows the core data model for parties, accounts, agreements, exposures, secured assets, allocations, transactions, balances, and audit events |
+| Target cloud architecture | [target-cloud-architecture.md](risk-exposure-secured-asset-platform-design/diagrams/target-cloud-architecture.md) | Shows the Amazon Web Services (AWS), Elastic Kubernetes Service (EKS), Kafka, Aurora PostgreSQL, Redis, OpenSearch, observability, and secrets-management target state |
+| Migration architecture | [migration-architecture.md](finance-system-migration-strategy/docs/migration-architecture.md) | Shows coexistence between legacy and target systems through routing, staging, Change Data Capture (CDC), reconciliation, audit, and dashboards |
+| Cutover flow | [cutover-runbook-flow.md](finance-system-migration-strategy/diagrams/cutover-runbook-flow.md) | Shows the production cutover decision flow and rollback path |
+| Reconciliation strategy | [reconciliation-strategy.md](finance-system-migration-strategy/docs/reconciliation-strategy.md) | Defines source-target validation, tolerance examples, exception handling, and sign-off controls |
+| Day-2 rollback runbook | [day-2-rollback-runbook.md](finance-system-migration-strategy/docs/day-2-rollback-runbook.md) | Defines rollback triggers, authority, traffic reversal, outbox handling, Change Data Capture (CDC) pause, and completion evidence |
+| Schema release governance | [schema-release-governance.md](schema-migration-toolkit/docs/schema-release-governance.md) | Defines database migration approvals, risk levels, rollback expectations, and expand-contract governance |
+| Oracle performance playbook | [oracle-performance-playbook.md](database-optimization-expert-strategy/docs/oracle-performance-playbook.md) | Defines evidence-driven Oracle Structured Query Language (SQL) tuning, execution plan review, wait-event analysis, and safe rollout |
+| Architecture Decision Records (ADRs) | [docs/adr](docs/adr/) | Captures binding decisions for Change Data Capture (CDC), outbox, saga, shadow traffic, service-owned databases, and expand-contract migration |
+| GitHub workflow | [github-workflow.md](docs/github-workflow.md) | Defines issue templates, labels, evidence expectations, and project-board states |
 
 ## My Positioning
 
@@ -28,12 +72,12 @@ I position myself as a legacy-to-modern migration specialist with deep experienc
 - Enterprise platform modernization
 - Oracle database performance improvement
 - Zero-loss data migration
-- Schema design and ER modeling
-- API-first and microservices architecture
+- Schema design and Entity Relationship (ER) modeling
+- Application Programming Interface-first (API-first) and microservices architecture
 - Parallel-run validation and phased cutover
 - Audit, security, compliance, and operational resilience
-- DevSecOps automation, observability, and engineering productivity
-- innovation adoption across AI-assisted engineering, data pipelines, and cloud platforms
+- Development, Security, and Operations (DevSecOps) automation, observability, and engineering productivity
+- innovation adoption across Artificial Intelligence-assisted (AI-assisted) engineering, data pipelines, and cloud platforms
 
 My strength is connecting architecture with execution: I can assess a legacy estate, design the migration path, improve database performance, define target-state services and schemas, and lead delivery through testing, reconciliation, cutover, and decommissioning.
 
@@ -42,18 +86,24 @@ My strength is connecting architecture with execution: I can assess a legacy est
 | Project | Focus |
 | --- | --- |
 | <img src="assets/icons/migration.svg" width="28" alt="Migration icon"> [General Finance System Migration Strategy](finance-system-migration-strategy/README.md) | Phased migration, data integrity, reconciliation, cutover, business continuity |
-| <img src="assets/icons/platform.svg" width="28" alt="Platform design icon"> [Risk Exposure & Secured Asset Platform Design](risk-exposure-secured-asset-platform-design/README.md) | Target architecture, microservices, AWS cloud, APIs, events, zero-downtime delivery |
-| <img src="assets/icons/database.svg" width="28" alt="Database optimization icon"> [Database Optimization Expert Strategy](database-optimization-expert-strategy/README.md) | Oracle tuning, execution plans, indexing, partitioning, batch and performance governance |
-| <img src="assets/icons/schema.svg" width="28" alt="Schema migration icon"> [Schema Migration Toolkit](schema-migration-toolkit/README.md) | Schema design, RBAC migration, coexistence data sync, migration tooling, governance |
-| <img src="assets/icons/legacy.svg" width="28" alt="Legacy platform icon"> [Legacy Asset Management Platform](legacy-asset-management-platform/README.md) | Documentation-only 2005-era legacy baseline with batch, PL/SQL-style, SOAP, MQ, and manual operations |
+| <img src="assets/icons/platform.svg" width="28" alt="Platform design icon"> [Risk Exposure & Secured Asset Platform Design](risk-exposure-secured-asset-platform-design/README.md) | Target architecture, microservices, Amazon Web Services (AWS) cloud, Application Programming Interfaces (APIs), events, zero-downtime delivery |
+| <img src="assets/icons/database.svg" width="28" alt="Database optimization icon"> [Database Optimization Expert Strategy](database-optimization-expert-strategy/README.md) | Oracle tuning, execution plans, indexing, partitioning, batch, and performance governance |
+| <img src="assets/icons/schema.svg" width="28" alt="Schema migration icon"> [Schema Migration Toolkit](schema-migration-toolkit/README.md) | Schema design, Role-Based Access Control (RBAC) migration, coexistence data sync, migration tooling, governance |
+| <img src="assets/icons/legacy.svg" width="28" alt="Legacy platform icon"> [Legacy Asset Management Platform](legacy-asset-management-platform/README.md) | Documentation-only 2005-era legacy baseline with batch, Procedural Language extension to Structured Query Language (PL/SQL)-style logic, Simple Object Access Protocol (SOAP), message queue (MQ), and manual operations |
 
 ## Leadership Themes
 
 | Theme | Portfolio Evidence |
 | --- | --- |
 | <img src="assets/icons/risk.svg" width="24" alt="Risk icon"> Risk and resiliency | [Risk Opportunity And Innovation Strategy](docs/risk-opportunity-innovation-strategy.md) |
-| <img src="assets/icons/devsecops.svg" width="24" alt="DevSecOps icon"> DevSecOps and quality | CI/CD, testing, security scans, progressive deployment, rollback controls |
-| <img src="assets/icons/innovation.svg" width="24" alt="Innovation icon"> Innovation and modern technology | AI-assisted engineering, data engineering, observability, cloud-native architecture |
+| <img src="assets/icons/devsecops.svg" width="24" alt="DevSecOps icon"> Development, Security, and Operations (DevSecOps) and quality | Continuous Integration and Continuous Delivery (CI/CD), testing, security scans, progressive deployment, rollback controls |
+| <img src="assets/icons/innovation.svg" width="24" alt="Innovation icon"> Innovation and modern technology | Artificial Intelligence-assisted (AI-assisted) engineering, data engineering, observability, cloud-native architecture |
+
+## Staff Engineer Review
+
+Use [Staff Engineer Deep-Dive Issue Backlog](docs/staff-engineer-issue-backlog.md) for a bank-grade review of the current workspace, including priority issues for migration safety, data integrity, Oracle performance, distributed transactions, shadow testing, observability, security, and governance.
+
+Use [Glossary](docs/glossary.md) for full forms and short definitions of abbreviations such as Application Programming Interface (API), Change Data Capture (CDC), Entity Relationship Diagram (ERD), Recovery Time Objective (RTO), Recovery Point Objective (RPO), and Service Level Objective (SLO).
 
 ## Projects
 
@@ -81,12 +131,12 @@ Design the target-state application architecture for the new platform.
 This project covers:
 
 - Domain model and ER diagrams
-- API-first architecture
+- Application Programming Interface-first (API-first) architecture
 - Microservice boundaries
 - Service-owned data model
 - Event-driven integration
-- AWS target cloud architecture
-- GitHub Actions, Helm, Argo CD, EKS, DevSecOps, testing, and zero-downtime strategy
+- Amazon Web Services (AWS) target cloud architecture
+- GitHub Actions, Helm, Argo CD, Elastic Kubernetes Service (EKS), Development, Security, and Operations (DevSecOps), testing, and zero-downtime strategy
 - Omnichannel access across web, mobile, branch, and partner channels
 - Observability, DevSecOps, and production readiness
 - New platform architecture decisions
@@ -99,7 +149,7 @@ Plan a database performance improvement strategy for Oracle-backed finance syste
 
 This project covers:
 
-- Oracle SQL tuning and execution plan analysis
+- Oracle Structured Query Language (SQL) tuning and execution plan analysis
 - Index, partitioning, and statistics strategy
 - Batch workload optimization
 - Wait event, locking, blocking, and contention analysis
@@ -119,7 +169,7 @@ This project covers:
 - Versioned schema migrations
 - Flyway/Liquibase-style migration workflows
 - Expand-contract database migration patterns
-- Auth/RBAC migration from legacy roles to target access controls
+- Authentication and Role-Based Access Control (Auth/RBAC) migration from legacy roles to target access controls
 - Coexistence data sync during phased migration
 - Data quality, lineage, validation, and reconciliation
 - Rollback, audit, and release governance
@@ -134,9 +184,9 @@ This project covers:
 
 - Java EE 5 style monolith context
 - JSP/Servlet/Struts-style operations dashboard
-- Oracle shared schema and PL/SQL-heavy processing
-- shell-script and SQL*Loader-style batch pipeline
-- SOAP/XML, MQ-style, and SFTP-style integrations
+- Oracle shared schema and Procedural Language extension to Structured Query Language (PL/SQL)-heavy processing
+- shell-script and Structured Query Language Loader (SQL*Loader)-style batch pipeline
+- Simple Object Access Protocol (SOAP)/Extensible Markup Language (XML), message queue (MQ)-style, and Secure File Transfer Protocol (SFTP)-style integrations
 - manual reconciliation and operations sign-off
 - modernization pain points and migration readiness
 
@@ -162,7 +212,7 @@ risk-exposure-secured-asset-operations-platform/
 
 Use [risk-exposure-secured-asset-platform-design/diagrams](risk-exposure-secured-asset-platform-design/diagrams/) for ER diagrams and architecture diagrams.
 
-The starter ERD is here: [core-domain-erd.md](risk-exposure-secured-asset-platform-design/diagrams/core-domain-erd.md).
+The starter Entity Relationship Diagram (ERD) is here: [core-domain-erd.md](risk-exposure-secured-asset-platform-design/diagrams/core-domain-erd.md).
 
 Recommended approach:
 

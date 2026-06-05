@@ -111,6 +111,7 @@ The migration architecture supports coexistence between a legacy finance system 
 - [migration-architecture.md](docs/migration-architecture.md)
 - [risk-control-matrix.md](docs/risk-control-matrix.md)
 - [reconciliation-strategy.md](docs/reconciliation-strategy.md)
+- [day-2-rollback-runbook.md](docs/day-2-rollback-runbook.md)
 
 ## Success Metrics
 

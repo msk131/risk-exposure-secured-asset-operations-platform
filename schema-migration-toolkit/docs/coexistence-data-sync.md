@@ -61,3 +61,52 @@ During phased migration, legacy and target systems often run together. Data sync
 - Rollback and replay procedures are ready.
 - Business and technology sign-off is captured.
 
+## Change Data Capture Ordering, Replay, And Lag Guardrails
+
+| Control | Standard |
+| --- | --- |
+| Source | Approved Oracle redo/archive log stream captured through Debezium Change Data Capture (CDC) |
+| Event key | Stable business aggregate identifier, such as `account_id`, `agreement_id`, `secured_asset_id`, or `exposure_id` |
+| Ordering | Consumers preserve ordering per aggregate key and reject older aggregate versions |
+| Schema version | Every event carries source schema version and target mapping version |
+| Replay | Replay starts from a documented connector offset into migration staging before target writes resume |
+| Ownership | Only one side is system of record per entity and migration phase |
+
+### Lag Thresholds
+
+| Flow | Warning | Cutover Blocker |
+| --- | --- | --- |
+| Reference data | 5 minutes | More than 15 minutes |
+| Account and agreement state | 60 seconds | More than 5 minutes |
+| Exposure and secured asset state | 30 seconds | More than 2 minutes |
+| Transaction history | 30 seconds | More than 2 minutes |
+| Audit events | 60 seconds | More than 5 minutes |
+
+### Failure Recovery
+
+| Failure | Recovery |
+| --- | --- |
+| Missed event | Pause consumers, replay from last verified offset, reconcile affected aggregate range |
+| Duplicate event | Use idempotency key and aggregate version to reject duplicate processing |
+| Out-of-order event | Quarantine event, wait for missing prior version, alert if gap exceeds threshold |
+| Schema drift | Stop connector, route records to staging quarantine, approve mapping update before replay |
+| Replay/live collision | Freeze writes for affected aggregate, reconcile legacy and target state, then choose authoritative owner |
+
+## Bidirectional Sync Loop Prevention
+
+Bridge-phase writes must carry an origin marker so migration-generated writes do not echo back into the source side.
+
+| Origin Marker | Example | Handling |
+| --- | --- | --- |
+| Application context | `migration_origin=legacy_to_target_sync` | Target triggers ignore reverse replication |
+| Client tag | `client_identifier=migration-bridge` | Oracle session logic excludes bridge writes |
+| Event header | `x-migration-origin=target_to_legacy_sync` | Change Data Capture (CDC) filters prevent looped event publishing |
+
+### Bridge Test Matrix
+
+| Scenario | Expected Result |
+| --- | --- |
+| Legacy write syncs to target | Target receives one update, no reverse write occurs |
+| Target write during rollback window syncs to legacy | Legacy receives one update, no echo event returns |
+| Same aggregate updated by old and new code | Conflict is routed to exception workflow |
+| Rollback during mixed-version deployment | Bridge remains active until all target-originated writes are reconciled |

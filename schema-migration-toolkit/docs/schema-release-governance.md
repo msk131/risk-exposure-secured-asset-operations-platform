@@ -27,3 +27,31 @@
 4. Move consumers gradually.
 5. Contract old schema only after sign-off.
 
+## Foreign Key And Constraint Rollout Strategy
+
+| Constraint Stage | Standard | Why |
+| --- | --- | --- |
+| Expand | Create new foreign keys nullable or disabled where legacy writes are still active | Prevent mixed-version inserts from failing |
+| Bridge | Use `DEFERRABLE INITIALLY DEFERRED` where parent and child writes can arrive in one transaction | Avoid transient parent-child ordering failures |
+| Backfill | Validate orphan counts before enabling enforcement | Prove old data is safe |
+| Validate | Use online or non-blocking validation where the database supports it | Avoid production lock escalation |
+| Contract | Enforce `NOT NULL` and validated foreign keys only after consumer sign-off | Make the final model strict after migration risk is gone |
+
+## Deterministic Write Ordering
+
+All services must update parent-child aggregates in the same order:
+
+1. Reference or party record.
+2. Account or agreement parent.
+3. Exposure or secured asset operational state.
+4. Allocation, transaction, or instruction child.
+5. Ledger and audit records.
+6. Outbox event.
+
+## Constraint Validation Evidence
+
+- Orphan-row query output.
+- Row counts before and after backfill.
+- Lock and runtime estimate.
+- Rollback or compensation script.
+- Business owner approval for rejected records.

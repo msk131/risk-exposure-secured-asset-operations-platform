@@ -48,3 +48,48 @@ Each exception should capture:
 - Decision
 - Approval reference
 
+## Deterministic Hash Strategy
+
+Reconciliation jobs must compare both individual records and grouped financial totals. Before hashing, fields are canonicalized so harmless formatting differences do not create false breaks.
+
+| Field Type | Canonicalization Rule |
+| --- | --- |
+| Timestamp | Convert to Coordinated Universal Time (UTC) and ISO-8601 format |
+| Currency amount | Normalize to approved scale per currency |
+| Null value | Represent as explicit token `<NULL>` |
+| Text | Trim, normalize whitespace, and apply agreed case rules |
+| Status | Map through approved legacy-to-target status table |
+| Identifier | Use stable business key, not environment-specific surrogate key |
+
+Example hash input:
+
+```text
+entity=EXPOSURE|id=EXP-123|currency=USD|amount=1000000.00|status=ACTIVE|version=7
+```
+
+## Exception Severity Model
+
+| Severity | Definition | Service Level Agreement (SLA) |
+| --- | --- | --- |
+| Critical | Data loss, duplicate financial movement, ledger mismatch, or regulated report mismatch | Block cutover; same-day executive and business sign-off required |
+| High | Exposure, secured asset, account, agreement, or transaction state mismatch | Block affected flow; remediation plan within 1 business day |
+| Medium | Non-financial lifecycle or operational reporting mismatch | Remediate or approve exception before traffic shift |
+| Low | Cosmetic or descriptive mismatch with no financial impact | Approve through variance list |
+
+## Monetary Rounding And Drift Policy
+
+| Data Area | Rule |
+| --- | --- |
+| Ledger balances | Exact match by account, currency, and snapshot timestamp |
+| Regulated reports | Exact match unless a documented rounding rule is approved |
+| Exposure calculations | Match approved precision, scale, and rounding mode per product |
+| Currency conversion | Compare source rate, target rate, converted amount, and rounding mode |
+| Non-critical analytics | Tolerance must be documented and approved by business owner |
+
+### Required Test Vectors
+
+- Zero quantity allocation.
+- Negative exposure adjustment.
+- High-value portfolio greater than 10 million in notional value.
+- Multi-currency conversion with more than two decimal places.
+- Boundary rounding at half-even and half-up thresholds.
