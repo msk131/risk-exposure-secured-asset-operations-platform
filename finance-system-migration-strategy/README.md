@@ -4,6 +4,26 @@ This project explains how to migrate a regulated finance system from a legacy pl
 
 The core strategy is simple: keep legacy and target systems running side by side, migrate one capability at a time, prove data and business outcomes through reconciliation, then shift production traffic only after explicit control gates are passed.
 
+## Purpose: Why Banks Migrate
+
+Banks do not migrate core finance systems just to use newer technology. They migrate when legacy platforms create business risk, operational friction, regulatory exposure, or prevent the bank from moving fast enough.
+
+Common migration drivers include:
+
+| Driver | Why It Matters |
+| --- | --- |
+| Legacy risk reduction | Aging platforms, unsupported software, fragile batch jobs, and scarce legacy skills increase operational risk. |
+| Regulatory and audit pressure | Banks need traceable data lineage, stronger controls, faster evidence retrieval, and reliable reporting for regulators and auditors. |
+| Data quality and reconciliation | Legacy systems often contain duplicated, inconsistent, or poorly governed data that makes reporting and decision-making harder. |
+| Faster product delivery | Modern platforms allow banks to launch new products, rules, workflows, and integrations without long legacy release cycles. |
+| Operational resilience | Cloud-ready and distributed architectures can improve availability, disaster recovery, monitoring, and incident response. |
+| Cost optimization | Mainframe, proprietary database, batch, and support costs can become expensive compared with modern managed or modular platforms. |
+| Security improvement | Modern platforms support stronger identity, encryption, secrets management, access control, and audit logging patterns. |
+| Customer and partner experience | APIs, real-time processing, and better integration patterns improve digital banking, servicing, and ecosystem connectivity. |
+| Analytics and AI readiness | Clean, governed, accessible data is required for risk models, fraud detection, personalization, and AI-enabled operations. |
+
+The goal is not only to replace old software. The goal is to move the bank from a fragile, tightly coupled operating model to a controlled, auditable, resilient, and change-ready platform.
+
 ## Migration Problem
 
 Finance migrations are hard because the old system is usually still the system of record while the new platform is being built. The migration must handle live business traffic, historical data, operational reports, regulatory evidence, security controls, and rollback readiness at the same time.
