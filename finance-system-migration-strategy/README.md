@@ -4,6 +4,8 @@ This project explains how to migrate a regulated finance system from a legacy pl
 
 The core strategy is simple: keep legacy and target systems running side by side, migrate one capability at a time, prove data and business outcomes through reconciliation, then shift production traffic only after explicit control gates are passed.
 
+This project uses the **Strangler Fig migration strategy**, one of the safest and most widely used approaches for modernizing critical legacy systems. Instead of replacing the entire legacy finance platform in one high-risk release, the new platform gradually grows around the old system. Capabilities are migrated one by one, traffic is routed in controlled slices, outcomes are reconciled, and legacy components are retired only after the target capability is proven in production.
+
 ## Purpose: Why Banks Migrate
 
 Banks do not migrate core finance systems just to use newer technology. They migrate when legacy platforms create business risk, operational friction, regulatory exposure, or prevent the bank from moving fast enough.
