@@ -1,35 +1,25 @@
 # Risk Exposure & Secured Asset Operations Platform
 
-This project is a banking modernization architecture blueprint.
+This repository documents a minimal modernization design for a legacy financial operations platform. The focus is risk exposure, secured assets, transactions, reconciliation, reporting, service-owned data, event-driven integration, and controlled migration from legacy systems.
 
-It focuses on how a legacy financial operations platform can be migrated into a modern, resilient, auditable platform for managing risk exposure, secured assets, transactions, operational instructions, reconciliation, and reporting.
+## Design Focus
 
-## What This Project Solves
-
-Legacy financial platforms often depend on monolithic applications, shared Oracle databases, batch jobs, manual reconciliation, and tightly coupled integrations. These systems are difficult to change safely, hard to audit end to end, and risky to migrate without interrupting live business operations.
-
-This project shows a structured approach to solving those problems:
-
-| Focus | Approach |
+| Area | Design Point |
 | --- | --- |
-| <img src="assets/icons/legacy.svg" width="22" alt="Legacy platform icon"> Legacy baseline | Understand the legacy platform and its operational risks |
-| <img src="assets/icons/database.svg" width="22" alt="Database icon"> Database performance | Handled in the separate Database Optimization Expert Strategy project |
-| <img src="assets/icons/platform.svg" width="22" alt="Platform icon"> Target architecture | Define a target microservice and cloud architecture |
-| <img src="assets/icons/schema.svg" width="22" alt="Schema icon"> Data ownership | Separate service-owned data from shared legacy schemas |
-| <img src="assets/icons/migration.svg" width="22" alt="Migration icon"> Phased migration | Use phased migration instead of a risky big-bang replacement |
-| <img src="assets/icons/risk.svg" width="22" alt="Risk control icon"> Reconciliation | Validate legacy and target systems through reconciliation and parallel run |
-| <img src="assets/icons/devsecops.svg" width="22" alt="Operations control icon"> Controls | Protect financial data integrity with audit, rollback, idempotency, and event-driven controls |
-| <img src="assets/icons/innovation.svg" width="22" alt="Modernization icon"> Operations | Prepare the system for production operations, monitoring, security, and controlled cutover |
+| Legacy boundary | Identify monolith modules, shared Oracle schemas, batch jobs, file feeds, and manual reconciliation points. |
+| Target services | Separate risk exposure, secured asset, transaction, instruction, reconciliation, and reporting capabilities. |
+| Data ownership | Move from shared database access to service-owned schemas and explicit integration contracts. |
+| Event flow | Publish domain events through outbox-backed Kafka topics for reporting and downstream consumers. |
+| Migration safety | Use phased routing, CDC/sync, shadow validation, reconciliation, and rollback controls. |
+| Operations | Track SLOs, audit trails, exception queues, release health, and decommission readiness. |
 
-## Project Structure
+## Diagrams
 
-| Area | Purpose |
+| Diagram | Purpose |
 | --- | --- |
-| <img src="assets/icons/legacy.svg" width="22" alt="Legacy platform icon"> [legacy-asset-management-platform](legacy-asset-management-platform/README.md) | Describes the 2005-era legacy baseline used for migration planning |
-| <img src="assets/icons/schema.svg" width="22" alt="Schema icon"> [schema-migration-toolkit](schema-migration-toolkit/README.md) | Covers schema evolution, expand-contract migration, data sync, access migration, and release governance |
-| <img src="assets/icons/migration.svg" width="22" alt="Migration icon"> [finance-system-migration-strategy](finance-system-migration-strategy/README.md) | Covers phased migration, reconciliation, cutover, rollback, and risk controls |
-| <img src="assets/icons/platform.svg" width="22" alt="Platform icon"> [risk-exposure-secured-asset-platform-design](risk-exposure-secured-asset-platform-design/README.md) | Defines the target platform architecture, services, data ownership, events, testing, security, and operations |
+| [diagrams/01-high-level-design.md](diagrams/01-high-level-design.md) | Target modernization architecture. |
+| [diagrams/02-low-level-design.md](diagrams/02-low-level-design.md) | Transaction and reconciliation flow. |
 
-## Outcome
+## Current Status
 
-The repository acts as an end-to-end system design reference for migrating a regulated financial platform from legacy architecture to a modern operating model without losing data, auditability, or business continuity.
+Design-only repository. Implementation details are intentionally kept out of scope.

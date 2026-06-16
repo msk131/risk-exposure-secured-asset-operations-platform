@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" role="img" aria-label="Schema migration icon">
-  <rect x="7" y="8" width="13" height="10" rx="2" fill="#F0FDF4" stroke="#16A34A" stroke-width="2"/>
-  <rect x="28" y="8" width="13" height="10" rx="2" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
-  <rect x="17" y="30" width="14" height="10" rx="2" fill="#FFFBEB" stroke="#D97706" stroke-width="2"/>
-  <path d="M20 13h8M14 18v7c0 3 3 5 7 5M35 18v7c0 3-3 5-7 5" fill="none" stroke="#64748B" stroke-width="2" stroke-linecap="round"/>
-</svg>
